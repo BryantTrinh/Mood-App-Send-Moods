@@ -4,12 +4,15 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const models = require('./models'); 
+// WITHOUT ROUTES DONE WE HAVE TO REQUIRE THE MODELS MODULE IN SERVER SO THAT THE SERVER KNOWS IT EXISTS 
+// AND THEN SEQUELIZE CAN CREATE THE TABLES
 
 const sequelize = require('./config/config');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 const hbs = exphbs.create({ helpers });
 

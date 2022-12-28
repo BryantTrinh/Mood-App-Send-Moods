@@ -2,6 +2,9 @@ const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
+console.log('user');
+console.log(User);
+
 Post.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
