@@ -1,5 +1,5 @@
 {
-  "name": "mood-app-send-moods",
+  "name": "send-moods",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nbtrieu/Mood-App-Send-Moods.git"
+    "url": "git+https://github.com/BryantTrinh/Mood-App-Send-Moods.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nbtrieu/Mood-App-Send-Moods/issues"
+    "url": "https://github.com/BryantTrinh/Mood-App-Send-Moods/issues"
   },
-  "homepage": "https://github.com/nbtrieu/Mood-App-Send-Moods#readme",
+  "homepage": "https://github.com/BryantTrinh/Mood-App-Send-Moods#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",
