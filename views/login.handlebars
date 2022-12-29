@@ -1,13 +1,52 @@
-{{!-- 
-Sign Up Card
-    username textbox
-    password textbox
-    submit button
-
-Sign In Card
-    username textbox
-    password textbox
-    submit button
-
-link to signUpAndSignIn.js
- --}}
+<div class="row">
+  <div class="col-md-6">
+    <div class="login-card">
+      <h2 class="page-title">LOG IN</h2>
+      <form class="form login-form">
+        <div class="form-group">
+          <label for="email-login">Username</label>
+          <input class="form-input" type="text" id="email-login" />
+        </div>
+        <div class="form-group">
+          <label for="password-login">Password</label>
+          <input class="form-input" type="password" id="password-login" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="login-card">
+      <h2 class="page-title">SIGN UP</h2>
+      <form class="form signup-form">
+        <div class="form-group">
+          <label for="name-signup">First Name</label>
+          <input class="form-input" type="text" id="first-name-signup" />
+        </div>
+        <div class="form-group">
+          <label for="name-signup">Last Name</label>
+          <input class="form-input" type="text" id="last-name-signup" />
+        </div>
+        <div class="form-group">
+          <label for="email-signup">Email</label>
+          <input class="form-input" type="text" id="email-signup" />
+        </div>
+        <div class="form-group">
+          <label for="username-signup">Username</label>
+          <input class="form-input" type="text" id="name-signup" />
+        </div>
+        <div class="form-group">
+          <label for="password-signup">Password</label>
+          <input class="form-input" type="password" id="password-signup" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Create Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  
+<script src="./js/login.js"></script>

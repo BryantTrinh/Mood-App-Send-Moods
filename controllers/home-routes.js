@@ -1,68 +1,27 @@
-// Finished
-
 const router = require('express').Router();
+const { User, Post, Comment } = require('../models');
 
-const { Post, User } = require('../models/');
+const withAuth = require('../utils/auth');
 
-
-// Get entire post
-
+// GET all projects for homepage
 router.get('/', async (req, res) => {
   try {
-    const postData = await Post.findAll({
-      include: [User],
-    });
-
-    const posts = postData.map((post) => post.get({ plain: true }));
-
-    res.render('all-posts', { posts });
-  } catch (err) {
-    res.status(500).json(err);
+    res.render('landing-page');
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
   }
 });
 
-// get route to get a single post
-
-router.get('/post/:id', async (req, res) => {
-  try {
-    const postData = await Post.findByPk(req.params.id, {
-      include: [
-        User,
-        {
-          model: Comment,
-          include: [User],
-        },
-      ],
-    });
-
-    if (postData) {
-      const post = postData.get({ plain: true });
-
-      res.render('single-post', { post });
-    } else {
-      res.status(404).end();
-    }
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
+// GET login/signup page
 router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to the feed page
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/feed');
     return;
   }
 
   res.render('login');
-});
-
-router.get('/signup', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('signup');
 });
 
 module.exports = router;

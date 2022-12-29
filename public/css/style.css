@@ -1,0 +1,84 @@
+:root {
+    --primary: #FFFFFF;
+    --secondary: #F3D8EE;
+    --tertiary: #DEBEEA;
+    /* --dark-primary: #55bcc9; */
+    --light-dark: #404040;
+    --dark: #000000;
+    --accent: #D060E4;
+    --border-radius: 0.3rem;
+  }
+  
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0;
+  color: var(--dark);
+  line-height: 1.25;
+}
+
+h2 a:visited {
+  color: var(--tertiary);
+}
+
+h2 a {
+  color: var(--primary);
+}
+
+/* header {
+  margin-top: 40px;
+
+} */
+
+main {
+  margin: 20px auto;
+  width: 94%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  background-color: var(--primary);
+  /* margin-top: -40px; */
+}
+
+.app-title {
+  background-color: var(--primary);
+  color: var(--dark);
+  display: inline-block;
+}
+
+.app-title h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 3rem;
+}
+
+.hero {
+  margin: auto
+}
