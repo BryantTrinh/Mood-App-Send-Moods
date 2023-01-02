@@ -1,7 +1,7 @@
 // Finished
 const router = require('express').Router();
 
-const { Post } = require('../models/');
+const { Post } = require('../models');
 
 const withAuth = require('../utils/auth');
 // GET, withAuth, const postData, await, Post.findAll
