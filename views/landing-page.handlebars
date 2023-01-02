@@ -1,14 +1,58 @@
 <header class="hero">
-  <img src="/assets/images/hero.jpeg" alt="person writing journal with polaroid photos" width="1500px" height="500px">
+  <img src="/assets/images/hero.jpeg" alt="person writing journal with polaroid photos" width="1451.5px" height="500px">
+  {{!-- *BUG: all the divs and sections below are not behaving in flex :(( --}}
+  <div class="d-flex flex-row justify-content-center">
+    <div class="button-group">
+      <a class="btn btn-dark btn-lg" href="/login">Log In</a>
+    </div>
+    <div class="button-group">
+      <a class="btn btn-dark btn-lg" href="/login">Sign Up</a>
+    </div>
+  </div>
 </header>
-<div class="d-flex flex-row justify-content-center">
-  <div class="m-5">
-    <a class="btn btn-dark btn-lg" href="/login">Log In</a>
-  </div>
-  <div class="m-5">
-    <a class="btn btn-dark btn-lg" href="/login">Sign Up</a>
-  </div>
-</div>
-<section>
 
+<section class="app-features row">
+  <div class="col-4 p-5">
+    <img src="/assets/images/placeholder412x300.png" alt="">
+  </div>
+  <div class="col-8 p-5">
+    <div class="row">
+      <h3>Journal Your Moods</h3>
+    </div>
+    <div class="row mt-3">
+      <p>Anytime anywhere, record your moods for the day and get some clarify for your mind and heart...</p>
+    </div>
+  </div>
+</section>
+
+<section class="app-features row">
+  <div class="col-8 p-5">
+    <div class="row">
+      <h3>Relate to Others</h3>
+    </div>
+    <div class="row mt-3">
+      <p>
+      You are not alone. Through our search bar and mood filters, find and connect with others who are going through similar moods to yours.
+      You can read posts, leave comments to interact, and save posts you like...
+    </p>
+    </div>
+    
+  </div>
+  <div class="col-4 p-5">
+    <img src="/assets/images/placeholder412x300.png" alt="">
+  </div>
+</section>
+
+<section class="app-features row">
+  <div class="col-4 p-5">
+    <img src="/assets/images/placeholder412x300.png" alt="">
+  </div>
+  <div class="col-8 p-5">
+    <div class="row">
+      <h3>Track Your Moods</h3>
+    </div>
+    <div class="row mt-3">
+      <p>Keep track of your symptoms day-to-day on your profile to recognize triggers and learn ways to better control them...</p>
+    </div>
+  </div>
 </section>
