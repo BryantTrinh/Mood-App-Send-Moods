@@ -1,7 +1,6 @@
-DROP DATABASE IF EXISTS sendmoods_db;
-CREATE DATABASE sendmoods_db;
 
-USE sendmoods_db;
+
+USE moods_db;
 CREATE TABLE users (
 user_id INT AUTO_INCREMENT PRIMARY KEY,
 first_name TEXT(20),
