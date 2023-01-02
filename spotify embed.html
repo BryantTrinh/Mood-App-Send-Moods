@@ -1,0 +1,28 @@
+<!-- Creating a form so that the user can input their embed code -->
+
+<form id="form">
+  <label for="" srcInput">Navigate to the playlist you'd like your viewers to see. Click on share, embed playlist, copy
+    the code, and paste the entire code here:</label><br>
+  <textarea id="srcInput"></textarea><br>
+  <button type="submit">Submit</button>
+</form>
+
+<div id="spotifyContainer"></div>
+
+<script>
+  let form = document.querySelector("form");
+  let srcInput = document.querySelector("#srcInput");
+  let spotifyContainer = document.querySelector("#spotifyContainer");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // get the value of srcInput element
+
+    let src = srcInput.value;
+
+    // we need to use innerHTML to set the spotifyContainer element to src input
+
+    spotifyContainer.innerHTML = src;
+  });
+</script>
