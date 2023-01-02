@@ -1,7 +1,8 @@
 DROP DATABASE IF EXISTS moods_db;
+DROP DATABASE IF EXISTS moods_db;
 
 CREATE DATABASE moods_db;
-USE moods_db;
+
 CREATE TABLE users (
 user_id INT AUTO_INCREMENT PRIMARY KEY,
 first_name TEXT(20),
