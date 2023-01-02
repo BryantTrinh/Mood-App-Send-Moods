@@ -9,5 +9,3 @@ router.use('/api', apiRoutes);
 router.use('/feed', feedRoutes);
 
 module.exports = router;
-
-module.exports = router;
