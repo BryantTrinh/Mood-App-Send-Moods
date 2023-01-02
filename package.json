@@ -31,5 +31,7 @@
     "nodemon": "^2.0.20",
     "sequelize": "^6.28.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
 }
