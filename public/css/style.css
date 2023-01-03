@@ -1,0 +1,124 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+    --primary: #FFFFFF;
+    --secondary: #F4E2F8;
+    --tertiary: #87798A;
+    /* --dark-primary: #55bcc9; */
+    --light-dark: #404040;
+    --dark: #000000;
+    --accent: #D060E4;
+    --border-radius: 0.3rem;
+  }
+  
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.25;
+}
+
+h2 a:visited {
+  color: var(--tertiary);
+}
+
+h2 a {
+  color: var(--primary);
+}
+
+/* header {
+  margin-top: 40px;
+
+} */
+
+main {
+  margin: 20px auto;
+  width: 94%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--primary);
+  box-shadow: 0px 0.5px var(--tertiary);
+}
+
+.app-title {
+  background-color: var(--primary);
+  display: inline-block;
+}
+
+.app-title a {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--dark);
+}
+
+.button-group {
+  margin: -100px 50px 5px 50px;
+  opacity: 0.9;
+}
+
+.full-screen {
+  width: 100%;
+}
+
+.app-features {
+  background-color: var(--secondary);
+}
+
+.app-features:nth-child(odd) {
+  background-color: var(--tertiary);
+  color: var(--primary);
+}
+
+.login-hero {
+  /* background-image: url("/public/assets/images/woodtable.jpeg"); not working cries */
+  margin: 0px 100px;
+}
+
+/* .login {
+  margin-top: -100px;
+} */
+
+.login-cards {
+  margin: -550px 400px 100px 100px;
+}
+
+.login {
+  margin-left: 200px;
+}
+
+.d-flex {
+  display: flex !important;
+}
