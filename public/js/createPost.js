@@ -1,4 +1,5 @@
 let choice = 0;
+let selectedMoods = [];
 
 const newPostFormHandler = async (event) => {
   console.log('STARTING createPost.js');
@@ -22,27 +23,17 @@ const selectEmojis = async (event) => {
   event.preventDefault();
 
   event.target.classList.remove('filter-grey');
+
 }
 
-function changeEmojiFilter() {
-  emoji1.classList.remove("clicked");
-  emoji2.classList.remove("clicked");
-  emoji3.classList.remove("clicked");
+const buttonElement = document.querySelector('.btn');
 
-  if (choice === 1) {
-    emoji1.classList.add("clicked");
-  } else if (choice === 2) {
-    emoji2.classList.add("clicked");
-  } else if (choice === 3) {
-    emoji3.classList.add("clicked");
-  }
-}
+buttonElement.addEventListener('click', () => {
+  buttonElement.classList.toggle('.filter-grey');
+});
 
-function selectChoice(emojiId) {
-  if (choice !== emojiId) {
-    choice = emojiId;
-  } else if (choice === emojiId) {
-    choice = 0;
-  }
-  changeEmojiFilter();
-}
+
+
+
+
+
