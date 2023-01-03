@@ -1,3 +1,5 @@
+let choice = 0;
+
 const newPostFormHandler = async (event) => {
   console.log('STARTING createPost.js');
   event.preventDefault();
@@ -14,6 +16,10 @@ const newPostFormHandler = async (event) => {
   console.log('post created');
   document.location.replace('/profile');
   };
-  
 
+const selectEmojis = async (event) => {
+  console.log('SELECTING emojis');
+  event.preventDefault();
 
+  event.target.classList.remove('filter-grey');
+}

@@ -12,10 +12,24 @@
       <textarea class="form-control" id="post-content-input"></textarea>
     </div>
     <div class="mb-3">
-      {{!-- add emojis here --}}
+      <button class="btn" onclick="selectEmojis(event)">
+        <img src="/assets/emojis/happy.svg" class="filter-grey" width="100px" id="emoji1"/>
+      </button>
+      <button class="btn" onclick="selectEmojis(event)">
+        <img src="/assets/emojis/neutral.svg" class="filter-grey" width="100px"/>
+      </button>
+      <button class="btn" onclick="selectEmojis(event)">
+        <img src="/assets/emojis/anxious.svg" class="filter-grey" width="100px"/>
+      </button>
+      <button class="btn" onclick="selectEmojis(event)">
+        <img src="/assets/emojis/angry.svg" class="filter-grey" width="100px"/>
+      </button>
+      <button class="btn" onclick="selectEmojis(event)">
+        <img src="/assets/emojis/sad.svg" class="filter-grey" width="100px"/>
+      </button>
     </div>
     <div class="d-grid gap-2">
-      <button class="btn" type="submit" id="login-btn" onclick="newPostFormHandler(event)">Create</button>
+      <button class="btn btn-primary" type="submit" id="login-btn" onclick="newPostFormHandler(event)">Create</button>
     </div>
   </form>
 </div>
