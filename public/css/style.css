@@ -247,6 +247,11 @@ p {
   background-color: black;
 }
 
+.login-background {
+  background-image: url("login2.jpeg");
+  padding: 10px;
+}
+
 /* .navbar-items {
   border: solid 2px;
   padding: 2px;
