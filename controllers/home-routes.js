@@ -3,7 +3,7 @@ const { User, Post, Comment } = require('../models');
 
 const withAuth = require('../utils/auth');
 
-// GET all projects for homepage
+// GET landing page
 router.get('/', async (req, res) => {
   try {
     res.render('landing-page');
