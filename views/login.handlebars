@@ -1,55 +1,59 @@
-<section class="hero login-hero">
+{{!-- <section class="hero login-hero">
   <div class="d-flex justify-content-center">
     <img src="/assets/images/login2.jpeg" alt="open blank bullet journal with dotted lines" width="1200px" height="800">
   </div>
-</section>
-<section class="login-cards">
-  <div class="row">
-    <div class="col align-self-end login">
-      <div class="card bg-transparent border-0" style="width: 25rem;">
-        <div class="card-body">
-          <h3 class="card-title mb-3">Log In</h3>
-          <div class="mb-3">
-            <label for="email-login" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email-login">
+</section> --}}
+<div class="login-background side-flex">
+  <section class="login-cards row">
+    <div class="row">
+      <div class="col login">
+        <div class="card bg-transparent border-0" style="width: 25rem;">
+          <div class="card-body">
+            <h3 class="card-title mb-3">Log In</h3>
+            <div class="mb-3">
+              <label for="email-login" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email-login">
+            </div>
+            <div class="mb-3">
+              <label for="username-login" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username-login">
+            </div>
+            <div class="mb-3">
+              <label for="password-login" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password-login">
+            </div>
+            <div>
+              <button class="btn btn-primary" type="submit" id="login-btn" onclick="loginFormHandler(event)">Log
+                In</button>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="username-login" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username-login">
-          </div>
-          <div class="mb-3">
-            <label for="password-login" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password-login">
-          </div>
-          <div>
-            <button class="btn btn-primary" type="submit" id="login-btn" onclick="loginFormHandler(event)">Log In</button>
+        </div>
+      </div>
+      <div class="col align-self-end signup">
+        <div class="card bg-transparent border-0" style="width: 25rem;">
+          <div class="card-body">
+            <h3 class="card-title">Sign Up</h3>
+            <div class="mb-3">
+              <label for="email-signup" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email-signup" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="username-signup" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username-signup">
+            </div>
+            <div class="mb-3">
+              <label for="password-signup" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password-signup">
+            </div>
+            <div>
+              <button class="btn btn-primary" type="submit" id="signup-btn" onclick="signupFormHandler(event)">Sign
+                Up</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col align-self-end signup">
-      <div class="card bg-transparent border-0" style="width: 25rem;">
-        <div class="card-body">
-          <h3 class="card-title">Sign Up</h3>
-          <div class="mb-3">
-            <label for="email-signup" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email-signup" placeholder="name@example.com">
-          </div>
-          <div class="mb-3">
-            <label for="username-signup" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username-signup">
-          </div>
-          <div class="mb-3">
-            <label for="password-signup" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password-signup">
-          </div>
-          <div>
-            <button class="btn btn-primary" type="submit" id="signup-btn" onclick="signupFormHandler(event)">Sign Up</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
 
 <script src="/js/login.js"></script>
