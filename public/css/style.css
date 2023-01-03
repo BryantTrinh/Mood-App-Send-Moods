@@ -102,6 +102,23 @@ p {
   color: var(--primary);
 }
 
+.login-hero {
+  /* background-image: url("/public/assets/images/woodtable.jpeg"); not working cries */
+  margin: 0px 100px;
+}
+
+/* .login {
+  margin-top: -100px;
+} */
+
+.login-cards {
+  margin: -550px 400px 100px 100px;
+}
+
+.login {
+  margin-left: 200px;
+}
+
 .d-flex {
   display: flex !important;
 }
@@ -130,7 +147,6 @@ p {
 /* post container properties */
 .post-polaroid {
   border: 3% solid black;
-  width: 100%;
 }
 .post-content {
   /* background lined notes */
@@ -142,24 +158,4 @@ p {
 }
 .post-footer {
   background-color: black;
-}
-
-.login-background{
-  background-image: url(../assets/images/login2.jpeg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 1000px;
-  background-position: center ;
-
-}
-
-.login-cards{
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border: 10px black solid;
-  margin-top: 75px;
-  margin-left: auto;
-  margin-right: auto;
 }
