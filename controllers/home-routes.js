@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to the feed page
   if (req.session.loggedIn) {
-    res.redirect('/feed');
+    res.redirect('/profile');
     return;
   }
 
