@@ -1,0 +1,23 @@
+<div class="card input-card mt-4">
+  <div class="card-header">
+    <h2>Create New Post</h2>
+  </div>
+  <form class="card-body" id="newpost-form">
+    <div class="mb-3">
+      <label for="post-title-input" class="form-label">Title</label>
+      <input class="form-control" type="text" id="post-title-input">
+    </div>
+    <div class="mb-3">
+      <label for="post-content-input" class="form-label">Content</label>
+      <textarea class="form-control" id="post-content-input"></textarea>
+    </div>
+    <div class="mb-3">
+      {{!-- add emojis here --}}
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn" type="submit" id="login-btn" onclick="newPostFormHandler(event)">Create</button>
+    </div>
+  </form>
+</div>
+
+<script src="/js/createPost.js"></script>

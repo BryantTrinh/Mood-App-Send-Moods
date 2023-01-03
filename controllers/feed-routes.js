@@ -16,13 +16,13 @@ router.get('/', withAuth, async (req, res) => {
     const posts = dbPostData.map((post) => post.get({ plain: true }));
     // console.log(posts);
 
-    res.render('feed-all-posts', {
-      layout: 'feed',
+    res.render('feed', {
+      layout: 'profile',
       posts, 
     });
 
   } catch (error) {
-    console.log(error);
+    console.log(">>>:: ",error);
     res.redirect('login');
   }
 });
@@ -32,7 +32,7 @@ router.get('/new', withAuth, async (req, res) => {
   try {
     // Don't need a post object because it hasn't existed!!
     res.render('create-new-post', {
-      layout: 'feed',
+      layout: 'profile',
     });
 
   } catch (error) {
@@ -51,7 +51,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
       const post = postData.get({ plain: true });
       
       res.render('edit-post', {
-        layout: 'feed',
+        layout: 'profile',
         post,
       });
 
