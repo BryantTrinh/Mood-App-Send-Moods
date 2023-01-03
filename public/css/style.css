@@ -122,3 +122,34 @@ p {
 .d-flex {
   display: flex !important;
 }
+
+/* flex container classes */
+
+/*flex columns stack 100% width*/
+.stack-flex {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+}
+/*flex rows side by side */
+.side-flex {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0;
+}
+
+/* post container properties */
+.post-polaroid {
+  border: 3% solid black;
+}
+.post-content {
+  /* background lined notes */
+  background-color: white;
+  font-size: 100%;
+}
+.post-header {
+  font-size: 150%;
+}
+.post-footer {
+  background-color: black;
+}
