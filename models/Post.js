@@ -13,26 +13,6 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    neutral_mood: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true,
-    },
-    happy_mood: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true,
-    },
-    angry_mood: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true,
-    },
-    sad_mood: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true,
-    },
-    questionable_mood: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true,
-    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
