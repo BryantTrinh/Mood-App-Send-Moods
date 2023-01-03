@@ -23,3 +23,26 @@ const selectEmojis = async (event) => {
 
   event.target.classList.remove('filter-grey');
 }
+
+function changeEmojiFilter() {
+  emoji1.classList.remove("clicked");
+  emoji2.classList.remove("clicked");
+  emoji3.classList.remove("clicked");
+
+  if (choice === 1) {
+    emoji1.classList.add("clicked");
+  } else if (choice === 2) {
+    emoji2.classList.add("clicked");
+  } else if (choice === 3) {
+    emoji3.classList.add("clicked");
+  }
+}
+
+function selectChoice(emojiId) {
+  if (choice !== emojiId) {
+    choice = emojiId;
+  } else if (choice === emojiId) {
+    choice = 0;
+  }
+  changeEmojiFilter();
+}
