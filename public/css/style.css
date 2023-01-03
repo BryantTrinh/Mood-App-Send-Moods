@@ -123,6 +123,12 @@ p {
   display: flex !important;
 }
 
+.filter-grey {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1);
+}
+
 /* flex container classes */
 
 /*flex columns stack 100% width*/
