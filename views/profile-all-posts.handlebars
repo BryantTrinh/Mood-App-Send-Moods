@@ -2,9 +2,8 @@
     <div class="row">
         <div class="col-sm-4">
         <div class="card" style="width: 18rem;">
-            <img src="{{user.image}}" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">{{user.name}}'s Profile Page</h5>
+                <h5 class="card-title">{{username}}'s Profile Page</h5>
             </div>
         </div>
     <div class="container">
@@ -12,10 +11,10 @@
         {{#each posts}}
         <div class="profile">
             <div class="profile-body">
-                <h3 class="mt-0">{{user.name}}</h5>
-                <h4>{{title}} <small class="red">{{status}}</small></h4>
-                <p>{{body}}</p>
-                <small>{{date}}</small>
+                <h3 class="mt-0">{{username}}</h5>
+                <h4>{{title}}</h4>
+                <p>{{content}}</p>
+                <small>{{date_created}}</small>
                 <br>
             </div>
         </div>
