@@ -1,5 +1,7 @@
-const logout = async () => {
-  console.log('starting logout.js')
+const logoutFormHandler = async (event) => {
+  console.log('Starting logout function');
+  event.preventDefault();
+  
   const response = await fetch('/api/user/logout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
