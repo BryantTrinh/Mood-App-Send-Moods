@@ -13,6 +13,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    selected_moods: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
