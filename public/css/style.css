@@ -3,16 +3,16 @@
 @tailwind utilities; */
 
 :root {
-    --primary: #FFFFFF;
-    --secondary: #F4E2F8;
-    --tertiary: #87798A;
-    /* --dark-primary: #55bcc9; */
-    --light-dark: #404040;
-    --dark: #000000;
-    --accent: #D060E4;
-    --border-radius: 0.3rem;
-  }
-  
+  --primary: #FFFFFF;
+  --secondary: #F4E2F8;
+  --tertiary: #87798A;
+  /* --dark-primary: #55bcc9; */
+  --light-dark: #404040;
+  --dark: #000000;
+  --accent: #D060E4;
+  --border-radius: 0.3rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -124,15 +124,18 @@ p {
 }
 
 .filter-grey {
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(1);
+  /* Google Chrome, Safari 6+ & Opera 15+ */
   filter: grayscale(1);
 }
 
 .navbar {
   margin: 0 auto;
   padding: 5px;
-  width: 100%;;
+  width: 100%;
+  ;
   border-bottom: 2px solid gainsboro;
   z-index: 20;
 }
@@ -200,7 +203,7 @@ p {
 .hero-text {
   font-size: 15px;
   font-weight: 700;
-  color:white;
+  color: white;
   text-transform: lowercase;
   padding-bottom: 4px;
 }
@@ -217,6 +220,7 @@ p {
   color: black;
 }
 
+/* start armond's css */
 /* flex container classes */
 
 /*flex columns stack 100% width*/
@@ -225,6 +229,7 @@ p {
   flex-direction: column;
   flex: 0 0 100%;
 }
+
 /*flex rows side by side */
 .side-flex {
   display: flex;
@@ -232,21 +237,61 @@ p {
   flex: 0 0;
 }
 
+/* margin and padding default */
+.spaced {
+  margin: 3%;
+  padding: 3%;
+}
+
+/* gap default */
+.gap {
+  gap: 20px;
+}
+
 /* post container properties */
 .post-polaroid {
-  border: 3% solid black;
+  border: 25px solid whitesmoke;
+  /* background-image: url(../images/polaroid-background.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: white; */
+  height: 700px;
+  width: 500px;
+  border-radius: 20px;
 }
+
 .post-content {
+  background-image: url(../images/dot-paper.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   /* background lined notes */
-  background-color: white;
+  /* background-color: white; */
   font-size: 100%;
 }
+
 .post-header {
-  font-size: 150%;
+  font-size: 170%;
+  font-style: bold;
+  flex-wrap: wrap;
 }
+
 .post-footer {
-  background-color: black;
+  background-color: whitesmoke;
 }
+
+.post-title {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.trial {
+  background-image: url(../images/dot-paper.png);
+  flex: 1 1 100%;
+  border: .5px black solid;
+  border-radius: 5px;
+}
+
+/* end armond's css */
 
 .login-background {
   background-image: url(../assets/images/login2.jpeg);
@@ -258,7 +303,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 0;
-  filter:grayscale(100%);
+  filter: grayscale(100%);
   margin: 0 auto;
   width: 60em;
   height: 45em;
