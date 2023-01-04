@@ -42,28 +42,36 @@ const newPostFormHandler = async (event) => {
 //   console.log('SELECTING emojis');
 //   event.preventDefault();
 
-  event.target.classList.remove('filter-grey');
-}
+//   event.target.classList.remove('filter-grey');
+// }
 
 function changeEmojiFilter() {
-  emoji1.classList.remove("clicked");
-  emoji2.classList.remove("clicked");
-  emoji3.classList.remove("clicked");
+  // emoji1.classList.add('filter-grey');
+  // emoji2.classList.add('filter-grey');
+  // emoji3.classList.add('filter-grey');
+  // emoji4.classList.add('filter-grey');
+  // emoji5.classList.add('filter-grey');
 
   if (choice === 1) {
-    emoji1.classList.add("clicked");
+    emoji1.classList.remove('filter-grey');
   } else if (choice === 2) {
-    emoji2.classList.add("clicked");
+    emoji2.classList.remove('filter-grey');
   } else if (choice === 3) {
-    emoji3.classList.add("clicked");
+    emoji3.classList.remove('filter-grey');
+  } else if (choice === 4) {
+    emoji4.classList.remove('filter-grey');
+  } else if (choice === 5) {
+    emoji5.classList.remove('filter-grey');
   }
 }
 
-function selectChoice(emojiId) {
+// still need to debug this
+function selectEmoji(emojiId) {
   if (choice !== emojiId) {
     choice = emojiId;
   } else if (choice === emojiId) {
     choice = 0;
-  }
+  };
   changeEmojiFilter();
 }
+
