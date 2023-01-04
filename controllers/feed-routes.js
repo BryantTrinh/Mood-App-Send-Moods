@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Post } = require('../models');
-
 const withAuth = require('../utils/auth');
 
 // GET all posts on feed
@@ -64,5 +63,26 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     // res.redirect('/login');
   }
 })
+
+
+// function to search for array for a specific number (emoji). For loop iterates through array and finds an element that is equal to 'num', then we add
+// the corresponding user created post to the list of results, and then we return the list of results.
+
+// function searchArray(arr, num) {
+//   var results= [];
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr [i] === num) {
+
+//       // here we are adding the user created post to the list of results.
+
+//       results.push(userCreatedPosts[arr[i]]);
+//     }
+//   }
+//   return results;
+// }
+
+
+
+
 
 module.exports = router;
