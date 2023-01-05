@@ -66,6 +66,3 @@ fetch('/api/saved-user-posts', {
 
 // do not add to schema, this needs to stay on js side, everytime someone creates a new post.
 
-// SELECT saved_user_post.user_id, post.title, post.content, post.selected_moods, post.date_created, post.user_id
-// FROM saved_user_post
-// INNER JOIN post ON saved_user_post.post_id= post.id;
