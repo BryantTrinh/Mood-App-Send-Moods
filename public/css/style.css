@@ -74,7 +74,7 @@ p {
 
 .app-title {
   background-color: var(--primary);
-  display: inline-block;
+  text-align: center;
 }
 
 .app-title a {
@@ -258,6 +258,8 @@ p {
   height: 700px;
   width: 500px;
   border-radius: 20px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .post-content {
@@ -327,4 +329,23 @@ p {
 .emoji-flex {
   display: flex;
   flex-direction: row;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-body {
+  margin: 0 auto;
+}
+
+.card {
+  margin: 0 auto;
 }
