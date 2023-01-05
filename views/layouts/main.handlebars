@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEND MOODS</title>
   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -15,21 +16,29 @@
 </head>
 
 <body>
-  <div class="d-flex flex-column full-screen">
-    <nav class="row navbar full-screen app-title">
-        <h1 class="text-center"><a href="/">SENDMOODS</a></h1>
-    </nav>
-    <div class="flex-column">
-      {{!-- <div class="col-auto">
-        
-      </div> --}}
-      {{{body}}}
+  <nav alt="flex container with app name element, hyperlinks (feed, saved, profile), and logout." class="navbar side-flex">
+    <div>
+      <div alt="title centered"class="nav-title">
+        SendMoods
+      </div>
+      <div alt="hyperlinks here" class="side-flex">
+        <div>Feed</div>
+        <div>Saved</div>
+        <div>Profile</div>
+      </div>
+      <div alt="logout button">
+        <button class="btn btn-primary" type="submit" id="logout-btn" onclick="logoutFormHandler(event)">Log
+          Out</button>
+      </div>
     </div>
-    <footer>
-      
-    </footer>
+  </nav>
+
+  {{{body}}}
+  <footer>
+
+  </footer>
   </div>
-  
+
   <script src="/js/logout.js"></script>
 </body>
 

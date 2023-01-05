@@ -3,16 +3,16 @@
 @tailwind utilities; */
 
 :root {
-    --primary: #FFFFFF;
-    --secondary: #F4E2F8;
-    --tertiary: #87798A;
-    /* --dark-primary: #55bcc9; */
-    --light-dark: #404040;
-    --dark: #000000;
-    --accent: #D060E4;
-    --border-radius: 0.3rem;
-  }
-  
+  --primary: #FFFFFF;
+  --secondary: #F4E2F8;
+  --tertiary: #87798A;
+  /* --dark-primary: #55bcc9; */
+  --light-dark: #404040;
+  --dark: #000000;
+  --accent: #D060E4;
+  --border-radius: 0.3rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -66,11 +66,11 @@ p {
   font-size: 1.2rem;
 }
 
-.navbar {
+/* .navbar {
   position: fixed;
   background-color: var(--primary);
   box-shadow: 0px 0.5px var(--tertiary);
-}
+} */
 
 .app-title {
   background-color: var(--primary);
@@ -124,11 +124,103 @@ p {
 }
 
 .filter-grey {
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(1);
+  /* Google Chrome, Safari 6+ & Opera 15+ */
   filter: grayscale(1);
 }
 
+.navbar {
+  margin: 0 auto;
+  padding: 5px;
+  width: 100%;
+  ;
+  border-bottom: 2px solid gainsboro;
+  z-index: 20;
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  color: black;
+  padding-left: 7px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero-background {
+  width: full;
+  height: 40em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://www.delonghi.com/medias/us-ADP-1920-desk-coffe-basics-hero-banner-coffee-basics-mob-2x.jpg?context=bWFzdGVyfHJvb3R8MjkwMDE5fGltYWdlL2pwZWd8aDA0L2gyZC8xNjM4MjU4MDkxNjI1NC91c19BRFBfMTkyMF9kZXNrX2NvZmZlX2Jhc2ljc19oZXJvLWJhbm5lcl9jb2ZmZWUtYmFzaWNzLW1vYkAyeC5qcGd8NjQzMjdkYzdmYmU0NWU4NjcyNDM1YjNkMjg0ZTdlY2U0YjA2YTdiYzI2OGZjYjdmZTQwNGQ1MWFiNmVkZDViMg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* .opacity-filter {
+  background-color: gray;
+  opacity: 30%;
+  width: 100%;
+  height: 40em;
+  position: relative;
+  z-index: 0;
+} */
+
+.hero-items {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding-top: 1em;
+}
+
+.hero-name {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  text-transform: lowercase;
+  padding-bottom: 4px;
+}
+
+.hero-button {
+  padding: 7px;
+  background-color: black;
+  transition: ease-in-out;
+  color: white;
+}
+
+.hero-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* start armond's css */
 /* flex container classes */
 
 /*flex columns stack 100% width*/
@@ -137,6 +229,7 @@ p {
   flex-direction: column;
   flex: 0 0 100%;
 }
+
 /*flex rows side by side */
 .side-flex {
   display: flex;
@@ -144,18 +237,88 @@ p {
   flex: 0 0;
 }
 
+/* margin and padding default */
+.spaced {
+  margin: 3%;
+  padding: 3%;
+}
+
+/* gap default */
+.gap {
+  gap: 20px;
+}
+
 /* post container properties */
 .post-polaroid {
-  border: 3% solid black;
+  border: 25px solid whitesmoke;
+  /* background-image: url(../images/polaroid-background.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: white; */
+  height: 700px;
+  width: 500px;
+  border-radius: 20px;
 }
+
 .post-content {
+  background-image: url(../images/dot-paper.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   /* background lined notes */
-  background-color: white;
+  /* background-color: white; */
   font-size: 100%;
 }
+
 .post-header {
-  font-size: 150%;
+  font-size: 170%;
+  font-style: bold;
+  flex-wrap: wrap;
 }
+
 .post-footer {
-  background-color: black;
+  background-color: whitesmoke;
+}
+
+.post-title {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.trial {
+  background-image: url(../images/dot-paper.png);
+  flex: 1 1 100%;
+  border: .5px black solid;
+  border-radius: 5px;
+}
+
+/* end armond's css */
+
+.login-background {
+  background-image: url(../assets/images/login2.jpeg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  filter: grayscale(100%);
+  margin: 0 auto;
+  width: 60em;
+  height: 45em;
+}
+
+
+.login-items {
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 10;
+}
+
+.form-header {
+  padding-left: 8em;
+  padding-right: 8em;
 }
