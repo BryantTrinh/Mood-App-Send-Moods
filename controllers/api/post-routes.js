@@ -16,7 +16,8 @@ router.post('/', withAuth, async (req, res) => {
     });
     // turn selected_moods string into array (e.g. '1,2' => ['1', '2'])
     let postEmojiIdArr = req.body.selected_moods.split(',');
-    // map over the array to turn every element into a key-value pair to store in post_emoji table
+    // map over the array to turn every element into a key-value pair
+    // to store in post_emoji table
     postEmojiIdArr = await postEmojiIdArr.map(id => ({
       post_id: parseInt(newPost.id),
       emoji_id: parseInt(id),
