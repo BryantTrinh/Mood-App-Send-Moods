@@ -3,6 +3,7 @@ const Post = require('./Post');
 const Comment = require('./Comment');
 const Emoji = require('./Emoji');
 const PostEmoji = require('./PostEmoji');
+const SavedPost = require('./SavedPost');
 
 Post.belongsTo(User, {
   foreignKey: 'user_id',
@@ -27,6 +28,15 @@ Post.belongsToMany(Emoji, {
 Emoji.belongsToMany(Post, {
   through: PostEmoji,
   foreignKey: 'emoji_id',
+});
+
+SavedPost.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
+
+SavedPost.hasMany(Post, {
+  foreignKey: 'post_id',
 })
 
-module.exports = { User, Post, Comment, Emoji };
+module.exports = { User, Post, Comment, Emoji, SavedPost };

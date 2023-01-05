@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Post } = require('../models');
+const { Post, User, Emoji } = require('../models');
+const PostEmoji = require('../models/PostEmoji');
 
 const withAuth = require('../utils/auth');
 
@@ -8,9 +9,13 @@ router.get('/', withAuth, async (req, res) => {
   // console.log('starting GET route for all posts on feed');
   try {
     const dbPostData = await Post.findAll({
-      where: {
-        user_id: req.session.user_id,
-      },
+      include: [
+        User,
+        {
+          model: Emoji,
+          through: PostEmoji,
+        },
+      ],
     });
 
     const posts = dbPostData.map((post) => post.get({ plain: true }));
@@ -27,7 +32,7 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-// GET to create new post page
+// GET to create-new-post page
 router.get('/new', withAuth, async (req, res) => {
   try {
     // Don't need a post object because it hasn't existed!!
