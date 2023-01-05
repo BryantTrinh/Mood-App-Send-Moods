@@ -261,7 +261,7 @@ p {
 }
 
 .post-content {
-  background-image: url(../images/dot-paper.png);
+  background-image: url(../assets/images/dot-paper.png);
   background-repeat: no-repeat;
   background-size: cover;
   /* background lined notes */
@@ -285,10 +285,11 @@ p {
 }
 
 .trial {
-  background-image: url(../images/dot-paper.png);
+  background-image: url(../assets/images/dot-paper.png);
   flex: 1 1 100%;
   border: .5px black solid;
   border-radius: 5px;
+  justify-content: stretch;
 }
 
 /* end armond's css */
