@@ -20,6 +20,13 @@ const newPostFormHandler = async (event) => {
     }
   }
   console.log('>>> selected_moods array: ', selected_moods);
+  // for (let i = 0; i < selected_moods.length; i++) {
+  //   const emoji_id = parseInt(selected_moods[i]);
+  //   return {
+
+  //   }
+  // }
+  // make another for loop to loop over selected_moods to store in postemoji table
 
   // make array to string here and put in POST request for a new column "moods" e.g. '1, 4'
   // then in GET request, split the string over the commas to turn back into array
@@ -28,10 +35,10 @@ const newPostFormHandler = async (event) => {
   // console.log('>>> selected moods: ', selected_moods);
   // console.log('>>> title: ', title);
   // console.log('>>> content: ', content);
-  
+
   await fetch('/api/post', {
     method: 'POST',
-    body: JSON.stringify({ title, content, selected_moods }),
+    body: JSON.stringify({ title, content, selected_moods }), // **DELETE SELECTED_MOODS COLUMN IN POST TABLE
     headers: { 'Content-Type': 'application/json' },
   });
 
