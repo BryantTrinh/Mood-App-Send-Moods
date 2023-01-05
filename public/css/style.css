@@ -323,3 +323,8 @@ p {
   padding-left: 8em;
   padding-right: 8em;
 }
+
+.emoji-flex {
+  display: flex;
+  flex-direction: row;
+}
