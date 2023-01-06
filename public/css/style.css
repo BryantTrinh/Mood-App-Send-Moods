@@ -542,3 +542,29 @@ p {
   display: flex;
   flex-direction: row;
 }
+
+.footer a {
+  padding-bottom: 3em;;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+
+.footer a:hover {
+  color:rgb(98, 98, 98);
+  transform: scale(1.1);
+}
+
+.save-btn {
+  transition: all .3s ease-in-out;
+}
+
+.save-btn:hover {
+  transform: scale(1.4);
+}
+
+.post-content {
+  max-width: 600px;
+}

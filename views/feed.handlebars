@@ -1,7 +1,15 @@
 
 <div class="container-fluid">
+        <div class="row">
+        <div class="">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Your Feed</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="container posts-container">
-    <h1 style="text-align: center;">Your Feed</h1>
     <div class="posts-items">
     {{#each posts as |post|}}
     <div class="stack-flex post-polaroid">
@@ -13,7 +21,7 @@
                     <div><h3 class="mt=0">{{post.user.username}}</h3></div>
                     <div class="post-title">{{post.title}}</div>
                 </div>
-                <p>{{post.content}}</p>
+                <p class="post-content">{{post.content}}</p>
                 <div alt="music embed"><small>spotify here</small></div>
             </div>
         </div>
@@ -35,4 +43,4 @@
 </div>
 </div>
 
-<script src=""></script>
+<script src="/js/savePost.js"></script>

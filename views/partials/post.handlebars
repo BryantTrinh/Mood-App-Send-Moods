@@ -5,10 +5,10 @@
                 <div
                     class="side-flex post-header spaced gap">
                     {{!-- <div alt="profile pic (pulled from?)">Image here</div> --}}
-                    <div alt="username pulled from sql"> {{post.user.username}}</div>
+                    <div alt="username pulled from sql"><h3 class="mt-0">{{post.user.username}}</h3> </div>
                     <div alt="post title pulled from sql. display on own line" class="post-title">{{post.title}}</div>
                 </div>
-                <p>{{post.content}}</p>
+                <p class="post-content">{{post.content}}</p>
                     <div alt="music embed"><small>spotify here</small></div>
             </div>
         </div>
@@ -23,6 +23,7 @@
         <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" width="30px" class="save-icon"></button>
         </div>
   </div>
+  <hr>
 {{/each}}
 
 <script src="/js/savePost.js"></script> 
