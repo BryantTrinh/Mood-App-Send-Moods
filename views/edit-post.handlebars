@@ -1,17 +1,19 @@
 <div class="card input-card mt-4">
   <div class="card-header">
-    <h2>Create New Post</h2>
+    <h2>Edit Post</h2>
   </div>
-  <form class="card-body" id="newpost-form">
+  <form class="card-body" id="editpost-form">
+    <input type="hidden" name="post-id" value="{{post.id}}" />
     <div class="mb-3">
       <label for="post-title-input" class="form-label">Title</label>
-      <input class="form-control" type="text" id="post-title-input">
+      <input class="form-control" type="text" name="post-title" value="{{post.title}}" />
     </div>
     <div class="mb-3">
       <label for="post-content-input" class="form-label">Content</label>
-      <textarea class="form-control" id="post-content-input"></textarea>
+      <textarea class="form-control" name="post-content">{{post.content}}</textarea>
     </div>
     <div class="mb-3">
+      {{!-- is there any way to show the check mark for the previously selected emojis?? --}}
       <input type="checkbox" id="emoji1" name="emoji1" value="1" class="mood-input">
       <label for="emoji1"> 
         <img src="https://res.cloudinary.com/dnwrm14k9/image/upload/v1672862460/happy_yjgksa.svg" width="100px" id="emoji5"/>
@@ -34,9 +36,10 @@
       </label><br>
     </div>
     <div class="d-grid gap-2">
-      <button class="btn btn-primary" type="submit" id="post-btn" onclick="newPostFormHandler(event)">Create</button>
+      <button class="btn btn-primary" type="submit" id="update-btn">Update</button>
+      <button class="btn btn-secondary" type="reset" id="delete-btn">Delete</button>
     </div>
   </form>
 </div>
 
-<script src="/js/createPost.js"></script>
+<script src="/js/editPost.js"></script>

@@ -49,7 +49,6 @@ router.get('/', async (req, res) => {
         {
           model: Emoji,
           through: PostEmoji,
-          // *BUG: is this wrong?
         }
       ]
     });
@@ -63,6 +62,7 @@ router.get('/', async (req, res) => {
 });
 
 // PUT route for updating post
+// *BUG: how to render new selected emojis after editing??
 router.put('/:id', withAuth, async (req, res) => {
   try {
     console.log('starting PUT route for editing post');
