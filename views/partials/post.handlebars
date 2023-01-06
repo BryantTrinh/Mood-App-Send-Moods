@@ -1,34 +1,24 @@
 {{#each posts as |post|}}
 <div alt="flex container for post elements. column stack" class="stack-flex post-polaroid">
-        <div alt="trial" class="trial">
-            <div alt="flex container for post with lined background. column stack" class="stack-flex post-content spaced">
-                <div alt="flex container for profile pic, username, and post title. side by side row."
-                    class="side-flex post-header spaced gap">
-                    <div alt="profile pic (pulled from?)">Image here</div>
-                    <div alt="username pulled from sql"> {{post.user.username}}</div>
-                    <div alt="post title pulled from sql. display on own line" class="post-title">{{post.title}}</div>
-                </div>
-                <div alt="post body">{{post.content}}</div>
-                    <div alt="music embed">spotify here</div>
-            </div>
-        </div>
-        <div alt="flex container for emojis associated with this post" class="post-footer side-flex spaced gap ">
-            <div alt="put emoji url to render images">happy</div>
-            <div alt="put emoji url to render images">neutral</div>
-            <div alt="put emoji url to render images">anxious</div>
-            <div alt="put emoji url to render images">angry</div>
-            <div alt="put emoji url to render images">sad</div>
-            <div alt="{{post.id}}" id="save-post-btn" onclick="savePostHandler(event)">save post</div>
-        </div>
+  <div alt="trial" class="trial">
+    <div alt="flex container for post with lined background. column stack" class="stack-flex post-content spaced">
+      <div alt="flex container for profile pic, username, and post title. side by side row."
+        class="side-flex post-header spaced gap">
+      <div alt="profile pic (pulled from?)">Image here</div>
+      <div alt="username pulled from sql"> {{post.user.username}}</div>
+      <div alt="post title pulled from sql. display on own line" class="post-title">{{post.title}}</div>
+      </div>
+      <div alt="post body">{{post.content}}</div>
+        <div alt="music embed">spotify here</div>
+      </div>
+  </div>
+    <div alt="flex container for emojis associated with this post" class="post-footer side-flex spaced gap ">
+      {{#each post.emojis as |emoji|}}
+      <img src="{{emoji.url}}" width="70px">
+      {{/each}}
+      <div alt="{{post.id}}" id="save-post-btn" onclick="savePostHandler(event)">save post</div>
     </div>
+  </div>
 {{/each}}
-    
 
-{{!-- <script src="/js/savePostHandler"></script>  --}}
-{{!-- no need?? --}}
-
-{{!-- {{#if has_happy}}<div alt="emoji pulled from sql if checked on post creation">happy</div>{{/if}}
-            {{#if has_neutral}}<div alt="emoji pulled from sql if checked on post creation">neutral</div>{{/if}}
-            {{#if has_anxious}}<div alt="emoji pulled from sql if checked on post creation">anxious</div>{{/if}}
-            {{#if has_angry}}<div alt="emoji pulled from sql if checked on post creation">angry</div>{{/if}}
-            {{#if has_sad}}<div alt="emoji pulled from sql if checked on post creation">sad</div>{{/if}} --}}
+<script src="/js/savePost.js"></script> 

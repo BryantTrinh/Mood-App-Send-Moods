@@ -4,6 +4,8 @@ const PostEmoji = require('../../models/PostEmoji');
 
 const withAuth = require('../../utils/auth');
 
+// The `/api/post` endpoint
+
 // CREATE new post (put withAuth back later)
 router.post('/', withAuth, async (req, res) => {
   console.log('starting POST route for new post');
@@ -25,6 +27,34 @@ router.post('/', withAuth, async (req, res) => {
     console.log(postEmojiIdArr);
     const postEmojiPairs = await PostEmoji.bulkCreate(postEmojiIdArr);
     res.status(200).json(postEmojiPairs);
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+// GET route for testing payload
+router.get('/', async (req, res) => {
+  try {
+    const dbPostData = await Post.findAll({
+      // where: {
+      //   user_id: req.session.user_id,
+      // },
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Emoji,
+          through: PostEmoji,
+          // *BUG: is this wrong?
+        }
+      ]
+    });
+
+    res.status(200).json(dbPostData);
 
   } catch (error) {
     console.log(error);
