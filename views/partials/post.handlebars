@@ -1,10 +1,10 @@
-{{#each posts as |post|}}
+{{!-- {{#each posts as |post|}}
 <div class="stack-flex post-polaroid">
         <div class="trial">
             <div class="stack-flex post-content spaced">
                 <div
                     class="side-flex post-header gap">
-                    <div class="pfp"><img src="/assets/images/profile-placeholder.png" alt="" width="50px"></div>
+
                     <div alt="username pulled from sql"><h3 class="mt-0 post-user">{{post.user.username}}</h3> </div>
                     <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
                 </div>
@@ -24,6 +24,35 @@
         </div>
   </div>
   <hr>
+{{/each}}
+
+<script src="/js/savePost.js"></script>  --}}
+
+
+{{#each posts as |post|}}
+<div alt="flex container for post elements. column stack" class="stack-flex post-polaroid">
+  <div alt="trial" class="trial">
+    <div alt="flex container for post with lined background. column stack" class="stack-flex post-content spaced">
+      <div alt="flex container for profile pic, username, and post title. side by side row."
+        class="side-flex post-header  gap">
+        <div class="pfp"><img src="/assets/images/profile-placeholder.png" alt="" width="50px"></div>
+      <div alt="username pulled from sql" class="post-user mt-0"> {{post.user.username}}</div>
+      <div class="date-created"><i><small>{{format_date post.date_created}}</small></i></div>
+      <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
+      </div>
+      <p class="post-content">{{post.content}}</p>
+        <div alt="music embed">spotify here</div>
+      </div>
+  </div>
+    <div alt="flex container for emojis associated with this post" class="post-footer side-flex spaced gap ">
+      {{!-- the save icon needs to be at the end of this flex box.. --}}
+      {{#each post.emojis as |emoji|}}
+      <img src="{{emoji.url}}" width="70px">
+      {{/each}}
+      <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" class="save-icon"></button>
+      <a href="/profile/edit/{{post.id}}">Edit</a>
+    </div>
+  </div>
 {{/each}}
 
 <script src="/js/savePost.js"></script> 

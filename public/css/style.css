@@ -307,10 +307,12 @@ p {
 .post-title {
   flex: 0 0 100%;
   text-align: left;
+  padding-bottom: 1em;
 }
 
 .post-user {
   color: black;
+  font-weight: 700;
   transition: all .3s ease-in-out;
 }
 
@@ -326,6 +328,18 @@ p {
   border: .5px black solid;
   border-radius: 5px;
   justify-content: stretch;
+}
+
+.edit-icon {
+  width: 50px;
+  float: right;
+  position: relative;
+}
+
+.date-created {
+  font-size: 20px;
+  padding-top: 6.5px;
+  padding-left: 5.8em;
 }
 
 /* end armond's css */
