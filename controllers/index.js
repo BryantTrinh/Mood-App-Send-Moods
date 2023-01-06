@@ -4,8 +4,10 @@ const homeRoutes = require('./home-routes.js');
 const profileRoutes = require('./profile-routes.js');
 const feedRoutes = require('./feed-routes.js');
 const searchRoutes = require('./search-routes.js');
+const filterRoutes = require('./filter-routes.js');
 
 
+router.use('/id', filterRoutes);
 router.use('/', homeRoutes); // landing page
 router.use('/profile', profileRoutes);
 router.use('/feed', feedRoutes);
