@@ -72,7 +72,7 @@ p {
   box-shadow: 0px 0.5px var(--tertiary);
 } */
 
-.app-title {
+/* .app-title {
   background-color: var(--primary);
   text-align: center;
 }
@@ -82,25 +82,25 @@ p {
   font-size: 3rem;
   font-weight: 900;
   color: var(--dark);
-}
+} */
 
-.button-group {
+/* .button-group {
   margin: -100px 50px 5px 50px;
   opacity: 0.9;
-}
+} */
 
-.full-screen {
+/* .full-screen {
   width: 100%;
-}
+} */
 
-.app-features {
+/* .app-features {
   background-color: var(--secondary);
-}
+} */
 
-.app-features:nth-child(odd) {
+/* .app-features:nth-child(odd) {
   background-color: var(--tertiary);
   color: var(--primary);
-}
+} */
 
 .login-hero {
   /* background-image: url("/public/assets/images/woodtable.jpeg"); not working cries */
@@ -111,17 +111,17 @@ p {
   margin-top: -100px;
 } */
 
-.login-cards {
+/* .login-cards {
   margin: -550px 400px 100px 100px;
-}
+} */
 
-.login {
+/* .login {
   margin-left: 200px;
-}
+} */
 
-.d-flex {
+/* .d-flex {
   display: flex !important;
-}
+} */
 
 .filter-grey {
   filter: gray;
@@ -168,6 +168,8 @@ p {
   background-image: url(https://cdn.shopify.com/s/files/1/0533/2089/files/how-to-generate-leads.jpg?v=1513349248&width=1024);
   background-size: cover;
   background-position: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid gainsboro;
 }
 
 .opacity-filter {
@@ -224,6 +226,7 @@ p {
   background-color: black;
   transition: ease-in-out;
   color: white;
+  padding: 13px 10px 13px 10px;
 }
 
 .logout-button:hover {
@@ -372,6 +375,7 @@ p {
   padding-bottom: 60px;
   padding-left: 8px;
   padding-right: 8px;
+  border-bottom: 1px solid gainsboro;
 }
 
 .nav > .nav-header {
@@ -404,6 +408,7 @@ p {
 
 .nav > .nav-links > a:hover {
   background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .nav > #nav-check {
@@ -455,3 +460,46 @@ p {
     overflow-y: auto;
   }
 }
+
+.features-card {
+  border: 1px solid gainsboro;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.features-card-right {
+  border: 1px solid gainsboro;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.features-card-container {
+  padding: 2px 16px;
+}
+
+.features-card > img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: auto;
+  margin: 10px;
+  border: 1px solid gainsboro;
+}
+
+.features-card-right > img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: auto;
+  margin: 10px;
+  border: 1px solid gainsboro;
+}
+
