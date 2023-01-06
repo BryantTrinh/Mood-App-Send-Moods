@@ -273,10 +273,10 @@ p {
 /* post container properties */
 .post-polaroid {
   border: 25px solid whitesmoke;
-  /* background-image: url(../images/polaroid-background.jpg); */
+  background-image: url(../images/polaroid-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: white; */
+  background-color: white;
   height: 700px;
   width: 500px;
   border-radius: 20px;
@@ -285,9 +285,9 @@ p {
 }
 
 .post-content {
-  background-image: url(../assets/images/dot-paper.png);
+  /* background-image: url(../assets/images/dottedline.jpeg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   /* background lined notes */
   /* background-color: white; */
   font-size: 100%;
@@ -309,7 +309,7 @@ p {
 }
 
 .trial {
-  background-image: url(../assets/images/dot-paper.png);
+  background-image: url(../assets/images/dottedline.jpeg);
   flex: 1 1 100%;
   border: .5px black solid;
   border-radius: 5px;
