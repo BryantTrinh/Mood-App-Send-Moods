@@ -32,5 +32,4 @@ router.get('/:emojiId', withAuth, (req, res) => {
 }
 });
 
-
 module.exports = router;
