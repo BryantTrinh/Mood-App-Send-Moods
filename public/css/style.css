@@ -72,9 +72,9 @@ p {
   box-shadow: 0px 0.5px var(--tertiary);
 } */
 
-.app-title {
+/* .app-title {
   background-color: var(--primary);
-  display: inline-block;
+  text-align: center;
 }
 
 .app-title a {
@@ -82,25 +82,25 @@ p {
   font-size: 3rem;
   font-weight: 900;
   color: var(--dark);
-}
+} */
 
-.button-group {
+/* .button-group {
   margin: -100px 50px 5px 50px;
   opacity: 0.9;
-}
+} */
 
-.full-screen {
+/* .full-screen {
   width: 100%;
-}
+} */
 
-.app-features {
+/* .app-features {
   background-color: var(--secondary);
-}
+} */
 
-.app-features:nth-child(odd) {
+/* .app-features:nth-child(odd) {
   background-color: var(--tertiary);
   color: var(--primary);
-}
+} */
 
 .login-hero {
   /* background-image: url("/public/assets/images/woodtable.jpeg"); not working cries */
@@ -111,16 +111,21 @@ p {
   margin-top: -100px;
 } */
 
-.login-cards {
+/* .login-cards {
   margin: -550px 400px 100px 100px;
-}
+} */
 
-.login {
+/* .login {
   margin-left: 200px;
-}
+} */
 
-.d-flex {
+/* .d-flex {
   display: flex !important;
+} */
+
+.save-icon {
+  filter: gray;
+  width: 50px;
 }
 
 .filter-grey {
@@ -135,7 +140,6 @@ p {
   margin: 0 auto;
   padding: 5px;
   width: 100%;
-  ;
   border-bottom: 2px solid gainsboro;
   z-index: 20;
 }
@@ -154,9 +158,9 @@ p {
   align-items: center;
   color: black;
   padding-left: 7px;
-  font-size: 30px;
+  font-size: 3rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .hero-background {
@@ -166,19 +170,21 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(https://www.delonghi.com/medias/us-ADP-1920-desk-coffe-basics-hero-banner-coffee-basics-mob-2x.jpg?context=bWFzdGVyfHJvb3R8MjkwMDE5fGltYWdlL2pwZWd8aDA0L2gyZC8xNjM4MjU4MDkxNjI1NC91c19BRFBfMTkyMF9kZXNrX2NvZmZlX2Jhc2ljc19oZXJvLWJhbm5lcl9jb2ZmZWUtYmFzaWNzLW1vYkAyeC5qcGd8NjQzMjdkYzdmYmU0NWU4NjcyNDM1YjNkMjg0ZTdlY2U0YjA2YTdiYzI2OGZjYjdmZTQwNGQ1MWFiNmVkZDViMg);
+  background-image: url(https://cdn.shopify.com/s/files/1/0533/2089/files/how-to-generate-leads.jpg?v=1513349248&width=1024);
   background-size: cover;
   background-position: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid gainsboro;
 }
 
-/* .opacity-filter {
-  background-color: gray;
-  opacity: 30%;
+.opacity-filter {
+  background-color: rgb(120 113 108);
+  opacity: 55%;
   width: 100%;
   height: 40em;
   position: relative;
   z-index: 0;
-} */
+}
 
 .hero-items {
   position: absolute;
@@ -187,13 +193,13 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 0;
   padding-top: 1em;
 }
 
 .hero-name {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 900;
   color: white;
   padding: 7px;
   text-align: center;
@@ -202,22 +208,36 @@ p {
 
 .hero-text {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 900;
   color: white;
   text-transform: lowercase;
   padding-bottom: 4px;
 }
 
 .hero-button {
-  padding: 7px;
+  padding: 15px;
   background-color: black;
   transition: ease-in-out;
   color: white;
 }
 
 .hero-button:hover {
-  background-color: white;
-  color: black;
+  transition-duration: .3s;
+  background-color: #333;
+  color: white;
+}
+
+.logout-button {
+  background-color: black;
+  transition: ease-in-out;
+  color: white;
+  padding: 13px 10px 13px 10px;
+}
+
+.logout-button:hover {
+  transition-duration: .3s;
+  background-color: #333;
+  color:white;
 }
 
 /* start armond's css */
@@ -258,6 +278,8 @@ p {
   height: 700px;
   width: 500px;
   border-radius: 20px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .post-content {
@@ -323,3 +345,166 @@ p {
   padding-left: 8em;
   padding-right: 8em;
 }
+
+.emoji-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-body {
+  margin: 0 auto;
+}
+
+.card {
+  margin: 0 auto;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  z-index: 20;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid black;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+.features-card {
+  border: 1px solid gainsboro;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.features-card-right {
+  border: 1px solid gainsboro;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.features-card-container {
+  padding: 2px 16px;
+}
+
+.features-card > img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: auto;
+  margin: 10px;
+  border: 1px solid gainsboro;
+}
+
+.features-card-right > img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: auto;
+  margin: 10px;
+  border: 1px solid gainsboro;
+}
+
