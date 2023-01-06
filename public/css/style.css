@@ -522,3 +522,14 @@ p {
 .right-image {
   float: right;
 }
+
+.navtitle a {
+  color:black;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+}
+
+.navtitle a:hover {
+  color: rgb(98, 98, 98);
+  transform: scale(1.1);
+}
