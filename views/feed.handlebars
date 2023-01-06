@@ -1,32 +1,38 @@
-{{!-- <div class="flex container for aside and posts. side by side">
-    <div class="aside for feed page">
-        <div class="Drop down menu with emotions/emojis">Pick your mood to filter posts</div>
-    </div>
-    <div class="flex container for posts. column stack">
-        <div class="individual post card pulled from post.handlebars"></div>
-        <div class="individual post card pulled from post.handlebars"></div>
-        <div class="individual post card pulled from post.handlebars"></div>
-        <div class="individual post card pulled from post.handlebars"></div>
-    </div>
-</div> --}}
 
-
-
-
-<div class="container">
-    {{#each posts}}
-    <div class="container-fluid">
-        <img src="{{user.image}}" class="mr-3 post-user-pic">
-        <div class="media-body">
-            <a href="/showposts/{{user._id}}"><h3 class="mt-0">{{user.username}}</h3></a>
-            <h4>{{title}} <small><i class="fa fa-globe"></i></small></h4>
-            <p>{{content}}</p>
-            {{!-- <small>{{date}}</small> --}}
-            <br>
+<div class="container-fluid">
+<div class="container posts-container">
+    <h1 style="text-align: center;">Your Feed</h1>
+    <div class="posts-items">
+    {{#each posts as |post|}}
+    <div class="stack-flex post-polaroid">
+        <div class="trial">
+            <div class="stack-flex post-content spaced">
+                <div
+                    class="side-flex post-header spaced gap">
+                    {{!-- <div alt="profile pic (pulled from?)">Image here</div> --}}
+                    <div><h3 class="mt=0">{{post.user.username}}</h3></div>
+                    <div class="post-title">{{post.title}}</div>
+                </div>
+                <p>{{post.content}}</p>
+                <div alt="music embed"><small>spotify here</small></div>
+            </div>
         </div>
-    </div>
-    <hr>
-    {{else}}
-    <p>No posts found ...</p>
-    {{/each}}
+        <div class="emojimark">
+            <div class="post-footer side-flex spaced gap ">
+                <img src="https://res.cloudinary.com/dnwrm14k9/image/upload/v1672862460/happy_yjgksa.svg" width="50" id="emoji5"/>
+                <img src="/assets/emojis/neutral.svg" width="50px" id="emoji5"/>
+                <img src="/assets/emojis/anxious.svg" width="50px" id="emoji5"/>
+                <img src="/assets/emojis/angry.svg" width="50px" id="emoji5"/>
+                <img src="/assets/emojis/sad.svg" width="50px" id="emoji5"/>
+            </div>
+            <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" width="30px" class="save-icon"></button>
+        </div>
+  </div>
+  <hr>
+  {{else}}
+  <p>No posts found...</p>
+{{/each}}
 </div>
+</div>
+
+<script src=""></script>

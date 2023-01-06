@@ -123,10 +123,10 @@ p {
   display: flex !important;
 } */
 
-.save-icon {
+/* .save-icon {
   filter: gray;
   width: 50px;
-}
+} */
 
 .filter-grey {
   filter: gray;
@@ -532,4 +532,13 @@ p {
 .navtitle a:hover {
   color: rgb(98, 98, 98);
   transform: scale(1.1);
+}
+
+.save-icon {
+  width: 30px;
+}
+
+.emojimark {
+  display: flex;
+  flex-direction: row;
 }
