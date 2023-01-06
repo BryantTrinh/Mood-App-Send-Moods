@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Emoji } = require('../models');
+const PostEmoji = require('../models/PostEmoji');
 
 const withAuth = require('../utils/auth');
 
@@ -16,6 +17,10 @@ router.get('/', withAuth, async (req, res) => {
           model: User,
           attributes: ['username'],
         },
+        {
+          model: Emoji,
+          through: PostEmoji,
+        }
       ]
     });
 

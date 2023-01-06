@@ -4,6 +4,8 @@ const PostEmoji = require('../../models/PostEmoji');
 
 const withAuth = require('../../utils/auth');
 
+// The `/api/post` endpoint
+
 // CREATE new post (put withAuth back later)
 router.post('/', withAuth, async (req, res) => {
   console.log('starting POST route for new post');
@@ -16,7 +18,8 @@ router.post('/', withAuth, async (req, res) => {
     });
     // turn selected_moods string into array (e.g. '1,2' => ['1', '2'])
     let postEmojiIdArr = req.body.selected_moods.split(',');
-    // map over the array to turn every element into a key-value pair to store in post_emoji table
+    // map over the array to turn every element into a key-value pair
+    // to store in post_emoji table
     postEmojiIdArr = await postEmojiIdArr.map(id => ({
       post_id: parseInt(newPost.id),
       emoji_id: parseInt(id),
@@ -24,6 +27,34 @@ router.post('/', withAuth, async (req, res) => {
     console.log(postEmojiIdArr);
     const postEmojiPairs = await PostEmoji.bulkCreate(postEmojiIdArr);
     res.status(200).json(postEmojiPairs);
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+// GET route for testing payload
+router.get('/', async (req, res) => {
+  try {
+    const dbPostData = await Post.findAll({
+      // where: {
+      //   user_id: req.session.user_id,
+      // },
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Emoji,
+          through: PostEmoji,
+          // *BUG: is this wrong?
+        }
+      ]
+    });
+
+    res.status(200).json(dbPostData);
 
   } catch (error) {
     console.log(error);
