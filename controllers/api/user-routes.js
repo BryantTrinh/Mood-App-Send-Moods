@@ -33,12 +33,20 @@ router.post('/login', async (req, res) => {
 
     const validPassword = await user.checkPassword(req.body.password);
 
-    if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect username or password, please try again' });
-      return;
-    }
+    // if (!validPassword) {
+    //   res
+    //     .status(400)
+    //     .json({ message: 'Incorrect username or password, please try again' });
+    //   return;
+    // }
+
+    if (!validPassword || req.body.password.length < 8) {
+  res
+    .status(400)
+    .json({ message: 'Incorrect username or password, please make sure your password is at least 8 characters long and try again' });
+  return;
+}
+
 
     req.session.save(() => {
       req.session.user_id = user.id;

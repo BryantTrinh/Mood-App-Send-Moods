@@ -7,7 +7,7 @@ Post.init(
   {
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     content: {
       type: DataTypes.STRING,
@@ -16,6 +16,10 @@ Post.init(
     selected_moods: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    spotify_embed_code:{
+      type: DataTypes.STRING,
+      allowNull: true
     },
     date_created: {
       type: DataTypes.DATE,

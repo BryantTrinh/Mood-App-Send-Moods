@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      window.alert('Failed to log in');
+      window.alert('Failed to log in, please check that your username and password are correct.');
     }
   };
 };
@@ -39,7 +39,7 @@ const signupFormHandler = async (event) => {
       console.log('signup ok');
       document.location.replace('/profile');
     } else {
-      window.alert('Failed to sign up');
+      window.alert('Failed to sign up, please check if your password is at least 8 characters long and try again');
     }
   };
 };
