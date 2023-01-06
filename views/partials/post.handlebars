@@ -13,10 +13,11 @@
       </div>
   </div>
     <div alt="flex container for emojis associated with this post" class="post-footer side-flex spaced gap ">
+      {{!-- the save icon needs to be at the end of this flex box.. --}}
       {{#each post.emojis as |emoji|}}
       <img src="{{emoji.url}}" width="70px">
       {{/each}}
-      <div alt="{{post.id}}" id="save-post-btn" onclick="savePostHandler(event)">save post</div>
+      <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" class="save-icon"></button>
     </div>
   </div>
 {{/each}}
