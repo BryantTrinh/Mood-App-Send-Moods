@@ -5,7 +5,7 @@
                 <div alt="flex container for profile pic, username, and post title. side by side row."
                     class="side-flex post-header spaced gap">
                     <div alt="profile pic (pulled from?)">Image here</div>
-                    <div alt="username pulled from sql"value="{{post.user_id}}" id="username"> {{post.user.username}}</div>
+                    <div alt="username pulled from sql" id="username"> {{post.user.username}}</div>
                     <div alt="post title pulled from sql. display on own line" class="post-title">{{post.title}}</div>
                 </div>
                 <div alt="post body">{{post.content}}</div>
@@ -18,7 +18,7 @@
             <img src="/assets/emojis/anxious.svg" width="50px" id="emoji5"/>
             <img src="/assets/emojis/angry.svg" width="50px" id="emoji5"/>
             <img src="/assets/emojis/sad.svg" width="50px" id="emoji5"/>
-            <div alt="{{post.id}}" id="save-post-btn" onclick="savePostHandler(event)">save post</div>
+            <div id="{{post.id}},{{post.user_id}}" onclick="savePostHandler(event)">save post</div>
         </div>
     </div>
   </div>
