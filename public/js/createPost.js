@@ -6,6 +6,7 @@ let emoji4 = document.getElementById('emoji4');
 let emoji5 = document.getElementById('emoji5');
 let selected_moods = [];
 
+
 const newPostFormHandler = async (event) => {
   console.log('STARTING createPost.js');
   event.preventDefault();
@@ -81,4 +82,3 @@ function selectEmoji(emojiId) {
   };
   changeEmojiFilter();
 }
-
