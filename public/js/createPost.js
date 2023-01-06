@@ -21,9 +21,6 @@ const newPostFormHandler = async (event) => {
   }
   console.log('>>> selected_moods array: ', selected_moods);
   selected_moods = selected_moods.join(',');
-  // console.log('>>> selected moods: ', selected_moods);
-  // console.log('>>> title: ', title);
-  // console.log('>>> content: ', content);
 
   await fetch('/api/post', {
     method: 'POST',

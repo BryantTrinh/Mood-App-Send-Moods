@@ -40,5 +40,5 @@ const deleteClickHandler = async () => {
   document.location.replace('/dashboard');
   };
 
-document.addEventListener('submit', editPostFormHandler);
+// document.addEventListener('submit', editPostFormHandler);
 document.addEventListener('reset', deleteClickHandler);

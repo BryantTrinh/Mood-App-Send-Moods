@@ -32,6 +32,16 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+// GET to search results page
+router.get('/search-results', withAuth, async (req, res) => {
+  try {
+    
+  } catch (error) {
+    console.log(error);
+    res.redirect('login');
+  }
+});
+
 // GET to create-new-post page
 router.get('/new', withAuth, async (req, res) => {
   try {

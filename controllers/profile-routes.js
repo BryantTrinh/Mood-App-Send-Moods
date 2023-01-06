@@ -24,8 +24,8 @@ router.get('/', withAuth, async (req, res) => {
       ]
     });
 
+    // serialize data from SQL for handlebars to handle
     const posts = dbPostData.map((post) => post.get({ plain: true }));
-    // console.log(posts);
 
     res.render('profile-all-posts', {
       layout: 'profile',
