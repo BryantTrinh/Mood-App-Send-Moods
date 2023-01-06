@@ -123,6 +123,11 @@ p {
   display: flex !important;
 } */
 
+.save-icon {
+  filter: gray;
+  width: 50px;
+}
+
 .filter-grey {
   filter: gray;
   /* IE6-9 */
