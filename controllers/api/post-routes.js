@@ -6,6 +6,50 @@ const withAuth = require('../../utils/auth');
 
 // The `/api/post` endpoint
 
+// // GET route for testing payload
+// router.get('/', async (req, res) => {
+//   try {
+//     const dbPostData = await Post.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['username'],
+//         },
+//         {
+//           model: Emoji,
+//           through: PostEmoji,
+//         }
+//       ]
+//     });
+
+//     res.status(200).json(dbPostData);
+
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).json(error);
+//   }
+// });
+
+// GET route for posts with the same emoji_id (for search functionality)
+router.get('/', async (req, res) => {
+  try {
+    const dbPostEmojiData = await PostEmoji.findAll({
+      where: { emoji_id: 1 }, 
+      include: [ 
+        {
+          model: Post,
+          include: [ User ]
+        }
+      ]
+    });
+
+    
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+})
+
 // CREATE new post (put withAuth back later)
 router.post('/', withAuth, async (req, res) => {
   console.log('starting POST route for new post');
@@ -28,30 +72,6 @@ router.post('/', withAuth, async (req, res) => {
     console.log(postEmojiIdArr);
     const postEmojiPairs = await PostEmoji.bulkCreate(postEmojiIdArr);
     res.status(200).json(postEmojiPairs);
-
-  } catch (error) {
-    console.log(error);
-    res.status(500).json(error);
-  }
-});
-
-// GET route for testing payload
-router.get('/', async (req, res) => {
-  try {
-    const dbPostData = await Post.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['username'],
-        },
-        {
-          model: Emoji,
-          through: PostEmoji,
-        }
-      ]
-    });
-
-    res.status(200).json(dbPostData);
 
   } catch (error) {
     console.log(error);
