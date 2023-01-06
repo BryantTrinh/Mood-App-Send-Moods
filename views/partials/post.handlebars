@@ -13,22 +13,15 @@
             </div>
         </div>
         <div alt="flex container for emojis associated with this post" class="post-footer side-flex spaced gap ">
-            <div alt="put emoji url to render images">happy</div>
-            <div alt="put emoji url to render images">neutral</div>
-            <div alt="put emoji url to render images">anxious</div>
-            <div alt="put emoji url to render images">angry</div>
-            <div alt="put emoji url to render images">sad</div>
+            <img src="https://res.cloudinary.com/dnwrm14k9/image/upload/v1672862460/happy_yjgksa.svg" width="50" id="emoji5"/>
+            <img src="/assets/emojis/neutral.svg" width="50px" id="emoji5"/>
+            <img src="/assets/emojis/anxious.svg" width="50px" id="emoji5"/>
+            <img src="/assets/emojis/angry.svg" width="50px" id="emoji5"/>
+            <img src="/assets/emojis/sad.svg" width="50px" id="emoji5"/>
             <div alt="{{post.id}}" id="save-post-btn" onclick="savePostHandler(event)">save post</div>
         </div>
     </div>
+  </div>
 {{/each}}
-    
 
-{{!-- <script src="/js/savePostHandler"></script>  --}}
-{{!-- no need?? --}}
-
-{{!-- {{#if has_happy}}<div alt="emoji pulled from sql if checked on post creation">happy</div>{{/if}}
-            {{#if has_neutral}}<div alt="emoji pulled from sql if checked on post creation">neutral</div>{{/if}}
-            {{#if has_anxious}}<div alt="emoji pulled from sql if checked on post creation">anxious</div>{{/if}}
-            {{#if has_angry}}<div alt="emoji pulled from sql if checked on post creation">angry</div>{{/if}}
-            {{#if has_sad}}<div alt="emoji pulled from sql if checked on post creation">sad</div>{{/if}} --}}
+<script src="/js/savePost.js"></script> 

@@ -21,17 +21,6 @@ const newPostFormHandler = async (event) => {
     }
   }
   console.log('>>> selected_moods array: ', selected_moods);
-  // for (let i = 0; i < selected_moods.length; i++) {
-  //   const emoji_id = parseInt(selected_moods[i]);
-  //   return {
-
-  //   }
-  // }
-  // make another for loop to loop over selected_moods to store in postemoji table
-
-  // make array to string here and put in POST request for a new column "moods" e.g. '1, 4'
-  // then in GET request, split the string over the commas to turn back into array
-  // then loop over array to assign each number in the array to the corresponding mood emoji
   selected_moods = selected_moods.join(',');
   // console.log('>>> selected moods: ', selected_moods);
   // console.log('>>> title: ', title);
@@ -46,13 +35,7 @@ const newPostFormHandler = async (event) => {
   document.location.replace('/profile');
   };
 
-// const selectEmojis = async (event) => {
-//   console.log('SELECTING emojis');
-//   event.preventDefault();
-
-//   event.target.classList.remove('filter-grey');
-// }
-
+// *NOTE: might not need the below?
 function changeEmojiFilter() {
   // emoji1.classList.add('filter-grey');
   // emoji2.classList.add('filter-grey');
