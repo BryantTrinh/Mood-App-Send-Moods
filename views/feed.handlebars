@@ -1,4 +1,4 @@
-<div class="flex container for aside and posts. side by side">
+{{!-- <div class="flex container for aside and posts. side by side">
     <div class="aside for feed page">
         <div class="Drop down menu with emotions/emojis">Pick your mood to filter posts</div>
     </div>
@@ -8,4 +8,25 @@
         <div class="individual post card pulled from post.handlebars"></div>
         <div class="individual post card pulled from post.handlebars"></div>
     </div>
+</div> --}}
+
+
+
+
+<div class="container">
+    {{#each posts}}
+    <div class="container-fluid">
+        <img src="{{user.image}}" class="mr-3 post-user-pic">
+        <div class="media-body">
+            <a href="/showposts/{{user._id}}"><h3 class="mt-0">{{user.username}}</h3></a>
+            <h4>{{title}} <small><i class="fa fa-globe"></i></small></h4>
+            <p>{{content}}</p>
+            {{!-- <small>{{date}}</small> --}}
+            <br>
+        </div>
+    </div>
+    <hr>
+    {{else}}
+    <p>No posts found ...</p>
+    {{/each}}
 </div>
