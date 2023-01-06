@@ -16,6 +16,7 @@ router.post('/', withAuth, async (req, res) => {
       ...req.body,
       user_id: req.session.user_id
     });
+
     // turn selected_moods string into array (e.g. '1,2' => ['1', '2'])
     let postEmojiIdArr = req.body.selected_moods.split(',');
     // map over the array to turn every element into a key-value pair
@@ -38,9 +39,6 @@ router.post('/', withAuth, async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const dbPostData = await Post.findAll({
-      // where: {
-      //   user_id: req.session.user_id,
-      // },
       include: [
         {
           model: User,
@@ -49,7 +47,6 @@ router.get('/', async (req, res) => {
         {
           model: Emoji,
           through: PostEmoji,
-          // *BUG: is this wrong?
         }
       ]
     });
@@ -63,6 +60,7 @@ router.get('/', async (req, res) => {
 });
 
 // PUT route for updating post
+// *BUG: how to render new selected emojis after editing??
 router.put('/:id', withAuth, async (req, res) => {
   try {
     console.log('starting PUT route for editing post');
@@ -73,10 +71,11 @@ router.put('/:id', withAuth, async (req, res) => {
 
     if (affectedRows > 0) {
       res.json(affectedRows);
-      res.status(200).end();
+      // res.status(200).end();
     } else {
       res.status(404).end();
     };
+
 
   } catch (error) {
     res.status(500).json(error);

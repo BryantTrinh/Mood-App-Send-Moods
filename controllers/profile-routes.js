@@ -24,8 +24,8 @@ router.get('/', withAuth, async (req, res) => {
       ]
     });
 
+    // serialize data from SQL for handlebars to handle
     const posts = dbPostData.map((post) => post.get({ plain: true }));
-    // console.log(posts);
 
     res.render('profile-all-posts', {
       layout: 'profile',
@@ -55,7 +55,6 @@ router.get('/new', withAuth, async (req, res) => {
 // GET to edit post page
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
-    // NEED a post object here to edit!!
     const postData = await Post.findByPk(req.params.id);
 
     if (postData) {
@@ -72,7 +71,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
   } catch (error) {
     console.log(error);
-    // res.redirect('/login');
+    res.redirect('/login');
   }
 })
 
