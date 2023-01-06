@@ -17,12 +17,9 @@
       {{#each post.emojis as |emoji|}}
       <img src="{{emoji.url}}" width="70px">
       {{/each}}
-      <button alt="{{post.id}}" class="btn save-btn" id="{{post.id}},{{post.user_id}}" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" class="save-icon"></button>
+      <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img id="{{post.id}},{{post.user_id}}"src="assets/images/save-icon.png" class="save-icon"></button>
       <a href="/profile/edit/{{post.id}}">Edit</a>
     </div>
   </div>
 {{/each}}
     
-
-{{!-- <script src="/js/savePostHandler"></script>  --}}
-{{!-- no need?? --}}
