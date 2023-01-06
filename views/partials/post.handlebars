@@ -5,7 +5,7 @@
                 <div alt="flex container for profile pic, username, and post title. side by side row."
                     class="side-flex post-header spaced gap">
                     <div alt="profile pic (pulled from?)">Image here</div>
-                    <div alt="username pulled from sql"> {{post.user.username}}</div>
+                    <div alt="username pulled from sql"value="{{post.user_id}}" id="username"> {{post.user.username}}</div>
                     <div alt="post title pulled from sql. display on own line" class="post-title">{{post.title}}</div>
                 </div>
                 <div alt="post body">{{post.content}}</div>
@@ -18,13 +18,12 @@
             <div alt="put emoji url to render images">anxious</div>
             <div alt="put emoji url to render images">angry</div>
             <div alt="put emoji url to render images">sad</div>
-            <div alt="{{post.id}}" id="save-post-btn" onclick="savePostHandler(event)">save post</div>
+            <div alt="save post button" id="{{post.id}},{{post.user_id}}" onclick="savePostHandler(event)">save post</div>
         </div>
     </div>
 {{/each}}
     
 
-{{!-- <script src="/js/savePostHandler"></script>  --}}
 {{!-- no need?? --}}
 
 {{!-- {{#if has_happy}}<div alt="emoji pulled from sql if checked on post creation">happy</div>{{/if}}

@@ -1,8 +1,13 @@
-function savePostHandler(event) {
+const savePostHandler = async (event) => {
     event.preventDefault();
     
-    const post_id = document.querySelector('#username-login').value.trim();
-    const user_id = document.querySelector('#password-login').value.trim();
+    let finder = event.target.id
+    let savePostIndex = finder.split(',')
+    let post_id = savePostIndex[0];
+    let user_id = savePostIndex[1];
+
+    console.log(savePostIndex[0])
+    console.log(savePostIndex[1])
     
     fetch('/api/saved-posts', {
       method: 'POST',

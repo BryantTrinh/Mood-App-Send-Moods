@@ -261,7 +261,7 @@ p {
 }
 
 .post-content {
-  background-image: url(../assets/images/dot-paper.png);
+  /* background-image: url(../assets/images/dot-paper.png); */
   background-repeat: no-repeat;
   background-size: cover;
   /* background lined notes */
