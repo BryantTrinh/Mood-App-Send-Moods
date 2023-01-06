@@ -265,6 +265,7 @@ p {
   padding: 3%;
 }
 
+
 /* gap default */
 .gap {
   gap: 20px;
@@ -273,13 +274,13 @@ p {
 /* post container properties */
 .post-polaroid {
   border: 25px solid whitesmoke;
-  background-image: url(../images/polaroid-background.jpg);
+  background-image: url("/public/assets/images/woodtable.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
+  /* background-color: white; */
   height: 700px;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: 20px;
   padding: 10px;
 }
@@ -300,12 +301,23 @@ p {
 }
 
 .post-footer {
-  background-color: whitesmoke;
+
 }
 
 .post-title {
   flex: 0 0 100%;
-  text-align: center;
+  text-align: left;
+}
+
+.post-user {
+  color: black;
+  transition: all .3s ease-in-out;
+}
+
+.post-user:hover {
+  color: rgb(131, 130, 130);
+  cursor: grab;
+  transform: scale(1.1);
 }
 
 .trial {
