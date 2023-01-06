@@ -1,0 +1,22 @@
+<div class="card input-card mt-4">
+  <div class="card-header">
+    <h2>Edit Post</h2>
+  </div>
+  <form class="card-body" id="editpost-form">
+    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <div class="mb-3">
+      <label for="post-title-input" class="form-label">Title</label>
+      <input class="form-control" type="text" name="post-title" value="{{post.title}}" />
+    </div>
+    <div class="mb-3">
+      <label for="post-content-input" class="form-label">Content</label>
+      <textarea class="form-control" name="post-content">{{post.content}}</textarea>
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit" id="update-btn" onclick="editPostFormHandler(event)">Update</button>
+      <button class="btn btn-secondary" type="reset" id="delete-btn">Delete</button>
+    </div>
+  </form>
+</div>
+
+<script src="/js/editPost.js"></script>
