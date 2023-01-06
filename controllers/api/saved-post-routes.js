@@ -13,4 +13,19 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.post('/delete', async (req, res) => {
+    try {
+        const deleteSave = await SavedPost.destroy({
+            where:{
+            post_id: req.body.post_id,
+            user_id: req.body.user_id
+            }
+        });
+        res.status(200).json(deleteSave);
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
+
+
 module.exports = router;
