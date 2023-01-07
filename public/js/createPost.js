@@ -21,7 +21,7 @@ const newPostFormHandler = async (event) => {
 
   await fetch('/api/post', {
     method: 'POST',
-    body: JSON.stringify({ title, content, selected_moods, spotify_embed_code }), // **DELETE SELECTED_MOODS COLUMN IN POST TABLE
+    body: JSON.stringify({ title, content, selected_moods, spotify_embed_code }),
     headers: { 'Content-Type': 'application/json' },
   });
 

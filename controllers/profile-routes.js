@@ -14,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          required: true,
         },
         {
           model: Emoji,

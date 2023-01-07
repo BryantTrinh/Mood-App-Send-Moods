@@ -6,35 +6,36 @@ const withAuth = require('../../utils/auth');
 
 // The `/api/post` endpoint
 
-// // GET route for testing payload
-// router.get('/', async (req, res) => {
-//   try {
-//     const dbPostData = await Post.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['username'],
-//         },
-//         {
-//           model: Emoji,
-//           through: PostEmoji,
-//         }
-//       ]
-//     });
-
-//     res.status(200).json(dbPostData);
-
-//   } catch (error) {
-//     console.log(error);
-//     res.status(500).json(error);
-//   }
-// });
-
-// GET route for posts with the same emoji_id (for search functionality)
+// GET route for testing payload
 router.get('/', async (req, res) => {
   try {
+    const dbPostData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Emoji,
+          through: PostEmoji,
+        }
+      ]
+    });
+
+    res.status(200).json(dbPostData);
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+// GET route for posts with the same emoji_id (for search functionality)
+router.get('/search/:id', async (req, res) => {
+  try {
     const dbPostEmojiData = await PostEmoji.findAll({
-      where: { emoji_id: 1 }, 
+      where: { emoji_id: req.params.id }, 
+      // where: { emoji_id: 1 }, 
       include: [ 
         {
           model: Post,
@@ -42,6 +43,9 @@ router.get('/', async (req, res) => {
         }
       ]
     });
+
+    res.status(200).json(dbPostEmojiData);
+    // *BUG: it's giving sequelize eager loading error "association not found btwn post and post_emoji" even though already in models index.js
 
     
   } catch (error) {

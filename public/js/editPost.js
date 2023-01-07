@@ -37,8 +37,5 @@ const deleteClickHandler = async () => {
   });
 
   console.log('post deleted');
-  document.location.replace('/dashboard');
+  document.location.replace('/profile');
   };
-
-// document.addEventListener('submit', editPostFormHandler);
-document.addEventListener('reset', deleteClickHandler);
