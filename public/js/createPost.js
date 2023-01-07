@@ -1,9 +1,4 @@
-let choice = 0;
-let emoji1 = document.getElementById('emoji1');
-let emoji2 = document.getElementById('emoji2');
-let emoji3 = document.getElementById('emoji3');
-let emoji4 = document.getElementById('emoji4');
-let emoji5 = document.getElementById('emoji5');
+
 let selected_moods = [];
 
 
@@ -13,6 +8,7 @@ const newPostFormHandler = async (event) => {
 
   const title = document.querySelector('#post-title-input').value.trim();
   const content = document.querySelector('#post-content-input').value.trim();
+  const spotify_embed_code = document.querySelector('#post-embed-input').value.trim();
 
   const moodInput = document.querySelectorAll('.mood-input');
   for (let i = 0; i < moodInput.length; i++) {
@@ -21,11 +17,13 @@ const newPostFormHandler = async (event) => {
     }
   }
   console.log('>>> selected_moods array: ', selected_moods);
+  console.log('>>> spotify: ', spotify_embed_code);
+  console.log('type of spotify: ' , typeof(spotify_embed_code));
   selected_moods = selected_moods.join(',');
 
   await fetch('/api/post', {
     method: 'POST',
-    body: JSON.stringify({ title, content, selected_moods }), // **DELETE SELECTED_MOODS COLUMN IN POST TABLE
+    body: JSON.stringify({ title, content, selected_moods, spotify_embed_code }), // **DELETE SELECTED_MOODS COLUMN IN POST TABLE
     headers: { 'Content-Type': 'application/json' },
   });
 
