@@ -11,22 +11,22 @@
       <label for="post-content-input" class="form-label">Content</label>
       <textarea class="form-control" id="post-content-input"></textarea>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 emoji-flex">
       <input type="checkbox" id="emoji1" name="emoji1" value="1" class="mood-input">
       <label for="emoji1"> 
-        <img src="https://res.cloudinary.com/dnwrm14k9/image/upload/v1672862460/happy_yjgksa.svg" width="100px" id="emoji5"/>
+        <img src="https://res.cloudinary.com/dnwrm14k9/image/upload/v1672862460/happy_yjgksa.svg" width="100px" id="emoji1"/>
       </label><br>
       <input type="checkbox" id="emoji2" name="emoji2" value="2" class="mood-input">
       <label for="emoji2"> 
-        <img src="/assets/emojis/neutral.svg" width="100px" id="emoji5"/>
+        <img src="/assets/emojis/neutral.svg" width="100px" id="emoji2"/>
       </label><br>
       <input type="checkbox" id="emoji3" name="emoji3" value="3" class="mood-input">
       <label for="emoji3"> 
-        <img src="/assets/emojis/anxious.svg" width="100px" id="emoji5"/>
+        <img src="/assets/emojis/anxious.svg" width="100px" id="emoji3"/>
       </label><br>
       <input type="checkbox" id="emoji4" name="emoji4" value="4" class="mood-input">
       <label for="emoji4"> 
-        <img src="/assets/emojis/angry.svg" width="100px" id="emoji5"/>
+        <img src="/assets/emojis/angry.svg" width="100px" id="emoji4"/>
       </label><br>
       <input type="checkbox" id="emoji5" name="emoji5" value="5" class="mood-input">
       <label for="emoji5"> 
@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="d-grid gap-2">
-      <button class="btn btn-primary" type="submit" id="post-btn" onclick="newPostFormHandler(event)">Create</button>
+      <button class="btn btn-dark" type="submit" id="post-btn" onclick="newPostFormHandler(event)">Create</button>
     </div>
   </form>
 </div>
