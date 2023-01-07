@@ -1,14 +1,24 @@
-
+<div class="search-box">
+  <h4>Search posts by emotion</h4>
+  <label for="emojis">Choose an emoji:</label>
+  <select id="emojis">
+    <option value="happy">Happy 😁</option>
+    <option value="neutral">Neutral 😐</option>
+    <option value="anxious">Anxious 😥</option>
+    <option value="angry">Angry 😠</option>
+    <option value="sad">Sad 😢</option>
+  </select>
+</div>
 <div class="container-fluid">
-        <div class="row">
-        <div class="">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Your Feed</h5>
-                </div>
-            </div>
-        </div>
+  <div class="row">
+  <div class="">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Your Feed</h5>
+      </div>
     </div>
+  </div>
+</div>
 <div class="container posts-container">
     <div class="posts-items">
     {{#each posts as |post|}}
@@ -23,7 +33,7 @@
       <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
       </div>
       <p class="post-content">{{post.content}}</p>
-        <div alt="music embed">spotify here</div>
+        <div id="spotifyContainer">{{{post.spotify_embed_code}}}</div>
       </div>
   </div>
     <div alt="flex container for emojis associated with this post" class="post-footer side-flex spaced gap ">
@@ -43,3 +53,4 @@
 </div>
 
 <script src="/js/savePost.js"></script>
+<script src="/js/search.js"></script>

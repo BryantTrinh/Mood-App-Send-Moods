@@ -6,7 +6,6 @@ const withAuth = require('../utils/auth');
 
 // GET all posts on profile
 router.get('/', withAuth, async (req, res) => {
-  // console.log('starting GET route for all posts on proi');
   try {
     const dbPostData = await Post.findAll({
       where: {
@@ -15,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          required: true,
         },
         {
           model: Emoji,
