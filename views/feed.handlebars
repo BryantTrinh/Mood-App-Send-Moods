@@ -1,14 +1,4 @@
-<div class="search-box">
-  <h4>Search posts by emotion</h4>
-  <label for="emojis">Choose an emoji:</label>
-  <select id="emojis">
-    <option value="happy">Happy 😁</option>
-    <option value="neutral">Neutral 😐</option>
-    <option value="anxious">Anxious 😥</option>
-    <option value="angry">Angry 😠</option>
-    <option value="sad">Sad 😢</option>
-  </select>
-</div>
+
 <div class="container-fluid">
   <div class="row">
   <div class="">
@@ -18,6 +8,18 @@
       </div>
     </div>
   </div>
+</div>
+  <div class="search-box">
+  <form id="emoji-search-form">
+    <select id="emoji-dropdown">
+      <option value="1">Happy 😁</option>
+      <option value="2">Neutral 😐</option>
+      <option value="3">Anxious 😥</option>
+      <option value="4">Angry 😠</option>
+      <option value="5">Sad 😢</option>
+    </select>
+    <input type="button" name="filter" value="Filter" class="btn btn-dark" onclick="searchFormHandler(event)">
+  </form>
 </div>
 <div class="container posts-container">
     <div class="posts-items">
@@ -33,16 +35,18 @@
       <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
       </div>
       <p class="post-content">{{post.content}}</p>
-        <div id="spotifyContainer">{{{post.spotify_embed_code}}}</div>
+        <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
       </div>
   </div>
-    <div alt="flex container for emojis associated with this post" class="post-footer side-flex spaced gap ">
+    <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
       {{!-- the save icon needs to be at the end of this flex box.. --}}
       {{#each post.emojis as |emoji|}}
       <img src="{{emoji.url}}" width="70px">
       {{/each}}
-      <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" class="save-icon"></button>
-      <a href="/profile/edit/{{post.id}}">edit</a>
+      <div class="edit-delete">
+        <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" class="save-icon"></button>
+        <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="sedit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button>
+      </div>
     </div>
   </div>
   <hr>

@@ -339,7 +339,6 @@ p {
 .date-created {
   font-size: 20px;
   padding-top: 6.5px;
-  padding-left: 5.8em;
 }
 
 /* end armond's css */
@@ -563,6 +562,7 @@ p {
 
 .save-icon {
   width: 30px;
+  cursor: grab;
 }
 
 .emojimark {
@@ -586,12 +586,53 @@ p {
 
 .save-btn {
   transition: all .3s ease-in-out;
+  cursor: grab;
 }
 
 .save-btn:hover {
   transform: scale(1.4);
+  cursor: grab;
 }
 
 .post-content {
   max-width: 600px;
+  height: 85%;
+  
+}
+.spotify-container {
+  width: 90%;
+  height: 30px;
+  max-height: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.edit-delete {
+ padding-top: 12px;
+ float: right;
+}
+
+.edit-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.btn {
+  padding-left: 5px;
+  padding-right: 5px;;
+}
+
+.edit-btn {
+  transition: all .3s ease-in-out;
+  cursor: grab;
+}
+
+.edit-btn:hover {
+  transform: scale(1.4);
+  cursor: grab;
+}
+.search-box {
+  border: 2px solid black;
+  width: 150px;
 }
