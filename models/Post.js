@@ -18,8 +18,8 @@ Post.init(
       allowNull: false
     },
     spotify_embed_code:{
-      type: DataTypes.STRING,
-      allowNull: true
+      type: DataTypes.STRING(500),
+      allowNull: true,
     },
     date_created: {
       type: DataTypes.DATE,
