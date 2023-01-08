@@ -19,6 +19,7 @@ const filterFormHandler = async (event) => {
   console.log(result); // the GET request to the API endpoint works! but not rendering
 }
 
-// either write another router.get('/filter'...) and write more code to filter.js to keep
+// TO BE DISCUSSED WITH TEAM:
+// OPTION 1: write another router.get('/filter'...) and write more code to filter.js to keep
 // the selected emoji after reloading instead of happy
-// OR turn this into a search functionality and render a search result page
+// OPTION 2: turn the filter into a search functionality and render a search result page

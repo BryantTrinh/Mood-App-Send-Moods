@@ -44,7 +44,6 @@ router.get('/', withAuth, async (req, res) => {
 // GET to create new post page
 router.get('/new', withAuth, async (req, res) => {
   try {
-    // Don't need a post object because it hasn't existed!!
     res.render('create-new-post', {
       layout: 'profile',
     });
