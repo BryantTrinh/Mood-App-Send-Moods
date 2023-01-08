@@ -22,22 +22,22 @@ const savePostHandler = async (event) => {
         saved = selectedElement.getAttribute("saved"),
         console.log(event.target),
         console.log(saved),
-        selectedElement.setAttribute("src","assets/images/save-icon.png")
-      )
-      return
-  };
-  if (saved = true) {
-    fetch('api/saved-posts/delete', {
-      method: 'POST',
-      body: JSON.stringify({ post_id, user_id }),
-      headers: { 'Content-type': 'application/json' }
-    })
-      .then(
-        selectedElement.setAttribute("saved", "false"),
-        saved = selectedElement.getAttribute("saved"),
-        console.log(event.target),
-        console.log(saved),
-        selectedElement.setAttribute("src","assets/images/dot-paper.png")
+        selectedElement.setAttribute("src","assets/images/filled-save.png")
+        )
+        return
+      };
+      if (saved = true) {
+        fetch('api/saved-posts/delete', {
+          method: 'POST',
+          body: JSON.stringify({ post_id, user_id }),
+          headers: { 'Content-type': 'application/json' }
+        })
+        .then(
+          selectedElement.setAttribute("saved", "false"),
+          saved = selectedElement.getAttribute("saved"),
+          console.log(event.target),
+          console.log(saved),
+          selectedElement.setAttribute("src","assets/images/save-icon.png")
       )
       return
   }
