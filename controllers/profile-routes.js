@@ -29,11 +29,11 @@ router.get('/', withAuth, async (req, res) => {
 
     // serialize data from SQL for handlebars to handle
     const posts = dbPostData.map((post) => post.get({ plain: true }));
-
     res.render('profile-all-posts', {
       layout: 'profile',
       posts, 
     });
+    console.log(posts);
 
   } catch (error) {
     console.log('>>> error: ', error);
@@ -63,7 +63,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
       const post = postData.get({ plain: true });
       
       res.render('edit-post', {
-        layout: 'profile',
+        layout: 'main',
         post,
       });
 
