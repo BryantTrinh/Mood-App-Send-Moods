@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { Post, User, Emoji } = require('../models');
 const PostEmoji = require('../models/PostEmoji');
+const { localStorage } = require("node-localstorage");
+
+// require functions from filter.js
 
 const withAuth = require('../utils/auth');
 
@@ -10,6 +13,7 @@ router.get('/', withAuth, async (req, res) => {
     const dbPostData = await Post.findAll({
       where: {
         user_id: req.session.user_id,
+        // emoji_id: emojiId,
       },
       include: [
         {
@@ -25,6 +29,12 @@ router.get('/', withAuth, async (req, res) => {
 
     // serialize data from SQL for handlebars to handle
     const posts = dbPostData.map((post) => post.get({ plain: true }));
+
+    // FOR FILTER FN: store posts to local storage every time profile page loads
+    // if (typeof window !== 'undefined') {
+    //   console.log('store local');
+    //   localStorage.setItem('posts', JSON.stringify(posts));
+    // }
 
     res.render('profile-all-posts', {
       layout: 'profile',

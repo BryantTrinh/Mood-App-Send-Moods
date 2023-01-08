@@ -9,9 +9,9 @@
     </div>
   </div>
 </div>
-  <div class="search-box">
-    <h4>Search posts by emotion</h4>
-  <form id="emoji-search-form">
+  <div class="Filter-box">
+    <h4>Filter posts by emotion</h4>
+  <form id="emoji-filter-form">
     <label for="emoji-dropdown">Choose an emoji:</label>
     <select id="emoji-dropdown">
       <option value="1">Happy 😁</option>
@@ -20,7 +20,7 @@
       <option value="4">Angry 😠</option>
       <option value="5">Sad 😢</option>
     </select>
-    <input type="button" name="filter" value="Filter" class="btn btn-dark" onclick="searchFormHandler(event)">
+    <input type="button" name="filter" value="Filter" class="btn btn-dark" onclick="filterFormHandler(event)">
   </form>
 </div>
 <div class="container posts-container">
@@ -59,4 +59,4 @@
 </div>
 
 <script src="/js/savePost.js"></script>
-<script src="/js/search.js"></script>
+<script src="/js/filter.js"></script>

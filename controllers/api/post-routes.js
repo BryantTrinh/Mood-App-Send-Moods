@@ -30,8 +30,9 @@ router.get('/', async (req, res) => {
   }
 });
 
+// commenting this out because we should avoid making too many calls to the server
 // GET route for posts with the same emoji_id (for search functionality)
-router.get('/search/:id', async (req, res) => {
+router.get('/filter/:id', async (req, res) => {
   try {
     const dbPostEmojiData = await PostEmoji.findAll({
       where: { emoji_id: req.params.id }, 
