@@ -45,7 +45,9 @@ router.get('/search/:id', async (req, res) => {
     });
 
     res.status(200).json(dbPostEmojiData);
-    // *BUG: it's giving sequelize eager loading error "association not found btwn post and post_emoji" even though already in models index.js
+    // *BUG: getting sequelize eager loading error 
+    // "association not found btwn post and post_emoji" 
+    // even though already in models index.js
 
     
   } catch (error) {
