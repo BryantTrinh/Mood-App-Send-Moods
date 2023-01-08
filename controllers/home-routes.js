@@ -23,17 +23,17 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// GET to search results page
-router.get('/search-results', withAuth, async (req, res) => {
-  try {
-    res.render('search-results', {
-      layout: 'profile',
-    });
+// // GET to search results page
+// router.get('/search-results', withAuth, async (req, res) => {
+//   try {
+//     res.render('search-results', {
+//       layout: 'profile',
+//     });
     
-  } catch (error) {
-    console.log(error);
-    res.redirect('login');
-  }
-});
+//   } catch (error) {
+//     console.log(error);
+//     res.redirect('login');
+//   }
+// });
 
 module.exports = router;
