@@ -13,24 +13,12 @@ const filterFormHandler = async (event) => {
   };
   console.log('>>> emojiId: ', emojiId);
 
-  await fetch(`api/post/filter/${emojiId}`, {
+  const result = await fetch(`api/post/filter/${emojiId}`, {
     method: 'GET',
-  })
-
-  // fetch(`api/post/search/${emojiId}`)
-  // .then((response) => response.json())
-  // .then((data) => console.log(data));
-
-  // get all data from local storage
-  // use .filter() to return a new array of posts with the emoji
-  // trigger a re-rendering based on the new posts data
-  // connect the post data from this function to posts to render in
+  });
+  console.log(result); // the GET request to the API endpoint works! but not rendering
 }
 
-
-
-// Array.from(document.querySelector('#emoji-dropdown').options).forEach(function(emoji) {
-
-// })
-
-// module.exports = all the functions
+// either write another router.get('/filter'...) and write more code to filter.js to keep
+// the selected emoji after reloading instead of happy
+// OR turn this into a search functionality and render a search result page

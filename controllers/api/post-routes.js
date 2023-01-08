@@ -30,13 +30,11 @@ router.get('/', async (req, res) => {
   }
 });
 
-// commenting this out because we should avoid making too many calls to the server
 // GET route for posts with the same emoji_id (for search functionality)
 router.get('/filter/:id', async (req, res) => {
   try {
     const dbPostEmojiData = await PostEmoji.findAll({
       where: { emoji_id: req.params.id }, 
-      // where: { emoji_id: 1 }, 
       include: [ 
         {
           model: Post,
@@ -46,10 +44,6 @@ router.get('/filter/:id', async (req, res) => {
     });
 
     res.status(200).json(dbPostEmojiData);
-    // *BUG: getting sequelize eager loading error 
-    // "association not found btwn post and post_emoji" 
-    // even though already in models index.js
-
     
   } catch (error) {
     console.log(error);

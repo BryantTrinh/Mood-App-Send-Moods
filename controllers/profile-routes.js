@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req, res) => {
     const dbPostData = await Post.findAll({
       where: {
         user_id: req.session.user_id,
-        // emoji_id: emojiId,
+        // emoji_id: emojiId, // *optional query parameter
       },
       include: [
         {
@@ -29,12 +29,6 @@ router.get('/', withAuth, async (req, res) => {
 
     // serialize data from SQL for handlebars to handle
     const posts = dbPostData.map((post) => post.get({ plain: true }));
-
-    // FOR FILTER FN: store posts to local storage every time profile page loads
-    // if (typeof window !== 'undefined') {
-    //   console.log('store local');
-    //   localStorage.setItem('posts', JSON.stringify(posts));
-    // }
 
     res.render('profile-all-posts', {
       layout: 'profile',
