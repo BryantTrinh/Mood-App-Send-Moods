@@ -140,8 +140,9 @@ p {
   margin: 0 auto;
   padding: 5px;
   width: 100%;
-  border-bottom: 2px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
   z-index: 20;
+  position: sticky;
 }
 
 .nav-container {
@@ -339,7 +340,6 @@ p {
 .date-created {
   font-size: 20px;
   padding-top: 6.5px;
-  padding-left: 5.8em;
 }
 
 /* end armond's css */
@@ -563,6 +563,7 @@ p {
 
 .save-icon {
   width: 30px;
+  cursor: grab;
 }
 
 .emojimark {
@@ -586,12 +587,116 @@ p {
 
 .save-btn {
   transition: all .3s ease-in-out;
+  cursor: grab;
 }
 
 .save-btn:hover {
   transform: scale(1.4);
+  cursor: grab;
 }
 
 .post-content {
   max-width: 600px;
+  height: 85%;
+  
+}
+.spotify-container {
+  width: 90%;
+  height: 30px;
+  max-height: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.edit-delete {
+ padding-top: 12px;
+ float: right;
+}
+
+.edit-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.btn {
+  padding-left: 5px;
+  padding-right: 5px;;
+}
+
+.edit-btn {
+  transition: all .3s ease-in-out;
+  cursor: grab;
+}
+
+.edit-btn:hover {
+  transform: scale(1.4);
+  cursor: grab;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.right-corner-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.right-corner-container-button {
+  height: 62px;
+  width: 62px;
+  border: none;
+  background-color: black;
+  border-radius: 62px;
+  transition: all 300ms;
+  box-shadow: 2px 2px 5px gray;
+  cursor: pointer;
+}
+
+.right-corner-container-button span {
+  font-size: 72px;
+  color: white;
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  line-height: 28px;
+}
+
+.right-corner-container-button:hover {
+  transition: all 400ms cubic-bezier(.62, .1, .5, 1);
+  width: 200px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.right-corner-container-button .long-text {
+  transition: opacity 1000ms;
+  opacity: 0;
+  color: white;
+  white-space: nowrap;
+  font-size: 0;
+  width: 0;
+  margin: 0;
+}
+
+.right-corner-container-button .long-text.show-long-text {
+  transition: opacity 700ms, width 1ms linear 270ms, font-size 1ms linear 270ms;
+  opacity: 1;
+  margin-top: 2px;
+  margin-left: 65px;
+  font-size: 20px;
+  width: auto;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
