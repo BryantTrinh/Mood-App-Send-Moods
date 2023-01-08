@@ -10,26 +10,21 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
   <div class="d-flex flex-column full-screen">
-    <nav class="row navbar full-screen app-title">
-      <h1 class="text-center"><a href="/">SENDMOODS</a></h1>
+    <nav class="row navbar full-screen">
+      <h1 class="text-center navtitle"><a href="/">SENDMOODS</a></h1>
       {{!-- <div>
         <button class="btn btn-primary" type="submit" id="logout-btn" onclick="logoutFormHandler(event)">Log
           Out</button>
       </div> --}}
     </nav>
-    <div class="row">
-      <header class="hero">
-        <h1 class="app-title">
-          <a href="/">Your Profile</a>
-        </h1>
-      </header>
+    <div class="">
       <main class="container container-fluid mt-2">
         <div class="col-auto">
           {{{body}}}

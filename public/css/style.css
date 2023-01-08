@@ -21,7 +21,7 @@ body {
   background-color: var(--primary);
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   color: var(--dark);
   line-height: 1.5;
   font-size: 16px;
@@ -123,10 +123,10 @@ p {
   display: flex !important;
 } */
 
-.save-icon {
+/* .save-icon {
   filter: gray;
   width: 50px;
-}
+} */
 
 .filter-grey {
   filter: gray;
@@ -158,9 +158,9 @@ p {
   align-items: center;
   color: black;
   padding-left: 7px;
-  font-size: 3rem;
+  font-size: 5rem;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .hero-background {
@@ -198,7 +198,7 @@ p {
 }
 
 .hero-name {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 900;
   color: white;
   padding: 7px;
@@ -207,7 +207,7 @@ p {
 }
 
 .hero-text {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 900;
   color: white;
   text-transform: lowercase;
@@ -219,6 +219,7 @@ p {
   background-color: black;
   transition: ease-in-out;
   color: white;
+  text-transform: uppercase;
 }
 
 .hero-button:hover {
@@ -232,6 +233,7 @@ p {
   transition: ease-in-out;
   color: white;
   padding: 13px 10px 13px 10px;
+  text-transform: uppercase;
 }
 
 .logout-button:hover {
@@ -263,6 +265,7 @@ p {
   padding: 3%;
 }
 
+
 /* gap default */
 .gap {
   gap: 20px;
@@ -271,21 +274,21 @@ p {
 /* post container properties */
 .post-polaroid {
   border: 25px solid whitesmoke;
-  /* background-image: url(../images/polaroid-background.jpg); */
+  background-image: url("/public/assets/images/woodtable.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: white; */
   height: 700px;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: 20px;
   padding: 10px;
 }
 
 .post-content {
-  /* background-image: url(../assets/images/dot-paper.png); */
+  /* background-image: url(../assets/images/dottedline.jpeg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   /* background lined notes */
   /* background-color: white; */
   font-size: 100%;
@@ -298,20 +301,45 @@ p {
 }
 
 .post-footer {
-  background-color: whitesmoke;
+
 }
 
 .post-title {
   flex: 0 0 100%;
-  text-align: center;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+.post-user {
+  color: black;
+  font-weight: 700;
+  transition: all .3s ease-in-out;
+}
+
+.post-user:hover {
+  color: rgb(131, 130, 130);
+  cursor: grab;
+  transform: scale(1.1);
 }
 
 .trial {
-  background-image: url(../assets/images/dot-paper.png);
+  background-image: url(../assets/images/dottedline.jpeg);
   flex: 1 1 100%;
   border: .5px black solid;
   border-radius: 5px;
   justify-content: stretch;
+}
+
+.edit-icon {
+  width: 50px;
+  float: right;
+  position: relative;
+}
+
+.date-created {
+  font-size: 20px;
+  padding-top: 6.5px;
+  padding-left: 5.8em;
 }
 
 /* end armond's css */
@@ -390,6 +418,7 @@ p {
 .nav > .nav-header > .nav-title {
   display: inline-block;
   font-size: 22px;
+  font-weight: 700;
   color: black;;
   padding: 10px 10px 10px 10px;
 }
@@ -402,6 +431,8 @@ p {
   display: inline;
   float: right;
   font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .nav > .nav-links > a {
@@ -487,7 +518,13 @@ p {
 }
 
 .features-card-container {
+  padding: 2px 16px; 
+  float: right;
+}
+
+.features-card-container-right {
   padding: 2px 16px;
+  float: left;
 }
 
 .features-card > img {
@@ -508,3 +545,52 @@ p {
   border: 1px solid gainsboro;
 }
 
+.right-image {
+  float: right;
+}
+
+.navtitle a {
+  color:black;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+}
+
+.navtitle a:hover {
+  color: rgb(98, 98, 98);
+  transform: scale(1.1);
+}
+
+.save-icon {
+  width: 30px;
+}
+
+.emojimark {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer a {
+  padding-bottom: 3em;;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+
+.footer a:hover {
+  color:rgb(98, 98, 98);
+  transform: scale(1.1);
+}
+
+.save-btn {
+  transition: all .3s ease-in-out;
+}
+
+.save-btn:hover {
+  transform: scale(1.4);
+}
+
+.post-content {
+  max-width: 600px;
+}
