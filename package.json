@@ -1,7 +1,7 @@
 {
   "name": "send-moods",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project Requirements You and your group will use everything you’ve learned over the past fourteen modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
