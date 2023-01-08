@@ -22,12 +22,12 @@ router.get('/', withAuth, async (req, res) => {
     // console.log(posts);
 
     res.render('feed', {
-      layout: 'profile',
-      posts, 
+      layout: 'main',
+      posts,
     });
 
   } catch (error) {
-    console.log(">>>:: ",error);
+    console.log(">>>:: ", error);
     res.redirect('login');
   }
 });
@@ -54,7 +54,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
     if (postData) {
       const post = postData.get({ plain: true });
-      
+
       res.render('edit-post', {
         layout: 'profile',
         post,
@@ -66,7 +66,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
   } catch (error) {
     console.log(error);
-    // res.redirect('/login');
+    res.redirect('/login');
   }
 })
 

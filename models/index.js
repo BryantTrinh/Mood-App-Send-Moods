@@ -40,11 +40,11 @@ PostEmoji.belongsTo(Post, {
 
 SavedPost.belongsTo(User, {
   foreignKey: 'user_id',
-  onDelete: 'CASCADE',
 });
 
-SavedPost.hasMany(Post, {
+SavedPost.belongsTo(Post, {
   foreignKey: 'post_id',
 })
+
 
 module.exports = { User, Post, Comment, Emoji, PostEmoji, SavedPost };

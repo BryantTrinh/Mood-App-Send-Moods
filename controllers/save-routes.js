@@ -12,32 +12,27 @@ router.get('/saved', withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
-      include: [
-        {
-          model: Post,
-        },
-        {
-          model: Emoji,
-          through: PostEmoji,
-        },
-        {
-          model: User,
-          attributes: ['username'],
-        }]
+      include: [User,
+        {model:Post,
+        include:[
+          {model:Emoji,
+          through: PostEmoji}]},
+    ],
     }
     );
 
     const savedPosts = dbSavedPostData.map((savedPost) => savedPost.get({ plain: true }));
-    // console.log(savedPosts);
+    console.log(savedPosts);
 
     res.render('saved-posts', {
-      layout: 'main',
+      layout: 'profile',
       savedPosts,
     });
 
   } catch (error) {
     console.log('>>> error: ', error);
-    res.redirect('login');
+    // res.redirect('login');
+    res.status(500).send(error);
   }
 });
 
