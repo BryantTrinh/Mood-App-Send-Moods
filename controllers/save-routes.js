@@ -1,6 +1,7 @@
 // covers everything in terms of rendering saved posts
 const router = require('express').Router();
-const { SavedPost, User } = require('../models');
+const { SavedPost, User, Post, Emoji } = require('../models');
+const PostEmoji = require('../models/PostEmoji');
 const withAuth = require('../utils/auth');
 
 // GET all posts on profile
@@ -16,19 +17,22 @@ router.get('/', withAuth, async (req, res) => {
           model: Post,
         },
         {
+          model: Emoji,
+          through: PostEmoji,
+        },
+        {
           model: User,
           attributes: ['username'],
-        },
-        }
-      ]
-    });
+        }]
+    }
+    );
 
     const savedPosts = dbSavedPostData.map((savedPost) => savedPost.get({ plain: true }));
     // console.log(savedPosts);
 
-    res.render('profile-all-saved-posts', {
-      layout: 'profile',
-      savedPosts, 
+    res.render('saved-posts', {
+      layout: 'main',
+      savedPosts,
     });
 
   } catch (error) {
