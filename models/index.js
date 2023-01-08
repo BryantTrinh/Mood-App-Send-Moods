@@ -30,6 +30,14 @@ Emoji.belongsToMany(Post, {
   foreignKey: 'emoji_id',
 });
 
+Post.hasMany(PostEmoji, {
+  foreignKey: 'post_id',
+});
+
+PostEmoji.belongsTo(Post, {
+  foreignKey: 'post_id',
+})
+
 SavedPost.belongsTo(User, {
   foreignKey: 'user_id',
 });

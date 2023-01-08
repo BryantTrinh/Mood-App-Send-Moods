@@ -634,7 +634,7 @@ p {
   cursor: grab;
 }
 
-.search-box {
+.filter-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
