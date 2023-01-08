@@ -11,7 +11,7 @@ router.use('/profile', profileRoutes);
 router.use('/feed', feedRoutes);
 router.use('/api', apiRoutes);
 router.use('/search', searchRoutes);
-router.use('/saved', savedRoutes);
+router.use('/saved-posts', savedRoutes);
 
 
 module.exports = router;

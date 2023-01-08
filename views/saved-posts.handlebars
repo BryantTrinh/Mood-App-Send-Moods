@@ -3,7 +3,7 @@
   <div class="">
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Your Feed</h5>
+        <h5 class="card-title">Your Saved Posts</h5>
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@
 </div>
 <div class="container posts-container">
     <div class="posts-items">
-    {{#each posts as |post|}}
+    {{#each savedPosts as |savedPost|}}
 <div alt="flex container for post elements. column stack" class="stack-flex post-polaroid">
   <div alt="trial" class="trial">
     <div alt="flex container for post with lined background. column stack" class="stack-flex post-content spaced">
@@ -52,7 +52,7 @@
   </div>
   <hr>
   {{else}}
-  <p>No posts found... WAH</p>
+  <p>No posts found... yet</p>
 {{/each}}
 </div>
 </div>
