@@ -41,18 +41,21 @@
       <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
       </div>
       <p class="post-content">{{post.content}}</p>
-        <div alt="music embed">spotify here</div>
+        <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
       </div>
   </div>
-    <div alt="flex container for emojis associated with this post" class="post-footer side-flex spaced gap ">
+    <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
       {{!-- the save icon needs to be at the end of this flex box.. --}}
       {{#each post.emojis as |emoji|}}
       <img src="{{emoji.url}}" width="70px">
       {{/each}}
-      <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img id="{{post.id}},{{post.user_id}}"src="assets/images/save-icon.png" class="save-icon"></button>
-      <a href="/profile/edit/{{post.id}}">Edit</a>
+      <div class="edit-delete">
+        <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" class="save-icon"></button>
+        <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="edit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button>
+      </div>
     </div>
   </div>
+  <hr>
 {{/each}}
 
 <script src="/js/savePost.js"></script> 
