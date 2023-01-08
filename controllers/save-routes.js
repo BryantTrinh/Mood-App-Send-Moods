@@ -5,7 +5,7 @@ const PostEmoji = require('../models/PostEmoji');
 const withAuth = require('../utils/auth');
 
 // GET all posts on profile
-router.get('/saved', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   // console.log('starting GET route for all posts on proi');
   try {
     const dbSavedPostData = await SavedPost.findAll({
@@ -38,5 +38,3 @@ router.get('/saved', withAuth, async (req, res) => {
 
 
 module.exports = router;
-
-
