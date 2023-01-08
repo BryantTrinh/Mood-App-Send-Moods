@@ -1,29 +1,28 @@
-
 <div class="container-fluid">
   <div class="row">
     <div class="">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              {{user}}
-              <h5 class="card-title">{{posts.user.username}}'s Profile Page</h5>
-            </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          {{user}}
+          <h5 class="card-title">{{posts.user.username}}'s Profile Page</h5>
         </div>
+      </div>
     </div>
   </div>
   <div class="filter-box">
     <h4>filter posts by emotion</h4>
-  <form id="emoji-filter-form">
-    <label for="emoji-dropdown">Choose an emoji:</label>
-    <select id="emoji-dropdown">
-      <option value="1">Happy 😁</option>
-      <option value="2">Neutral 😐</option>
-      <option value="3">Anxious 😥</option>
-      <option value="4">Angry 😠</option>
-      <option value="5">Sad 😢</option>
-    </select>
-    <input type="button" name="filter" value="Filter" class="btn btn-dark" onclick="filterFormHandler(event)">
-  </form>
-</div>
+    <form id="emoji-filter-form">
+      <label for="emoji-dropdown">Choose an emoji:</label>
+      <select id="emoji-dropdown">
+        <option value="1">Happy 😁</option>
+        <option value="2">Neutral 😐</option>
+        <option value="3">Anxious 😥</option>
+        <option value="4">Angry 😠</option>
+        <option value="5">Sad 😢</option>
+      </select>
+      <input type="button" name="filter" value="Filter" class="btn btn-dark" onclick="filterFormHandler(event)">
+    </form>
+  </div>
   <div class="container posts-container">
     <div class="posts-items">
       {{>post}}
