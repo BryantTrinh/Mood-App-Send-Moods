@@ -12,6 +12,11 @@
       <label for="post-content-input" class="form-label">Content</label>
       <textarea class="form-control" name="post-content">{{post.content}}</textarea>
     </div>
+    <div class="mb-3">
+      <label for="post-embed-input" class="form-label">Want to add a different song or playlist? Copy the new embed code
+        below.</label>
+      <input class="form-control" type="text" id="post-embed-input">
+    </div>
     <div class="d-grid gap-2">
       <button class="btn btn-primary" type="submit" id="update-btn" onclick="editPostFormHandler(event)">Update</button>
       <button class="btn btn-secondary" type="submit" id="delete-btn" onclick="deleteClickHandler()">Delete</button>
