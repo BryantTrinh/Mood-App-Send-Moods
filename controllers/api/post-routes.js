@@ -73,6 +73,7 @@ router.post('/', withAuth, async (req, res) => {
     postEmojiIdArr = await postEmojiIdArr.map(id => ({
       post_id: parseInt(newPost.id),
       emoji_id: parseInt(id),
+      user_id: req.session.user_id,
     }))
     console.log(postEmojiIdArr);
     const postEmojiPairs = await PostEmoji.bulkCreate(postEmojiIdArr);

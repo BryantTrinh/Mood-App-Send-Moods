@@ -13,18 +13,15 @@
       <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
     </div>
   </div>
-  <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
-    {{#each post.emojis as |emoji|}}
-    <img src="{{emoji.url}}" width="70px">
-    {{/each}}
-    <div class="edit-delete">
-      <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img
-          id="{{post.id}},{{post.user_id}}" src="assets/images/save-icon.png" class="save-icon"></button>
-      <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="edit-post-btn"
-        onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png"
-          class="edit-icon"></button>
+    <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
+      {{#each post.emojis as |emoji|}}
+      <img src="{{emoji.url}}" width="70px">
+      {{/each}}
+      <div class="edit-delete">
+        <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img id="{{post.id}},{{post.user_id}}" src="assets/images/save-icon.png" class="save-icon"></button>
+        <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="edit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button>
+      </div>
     </div>
   </div>
-</div>
-<hr>
+  <hr>
 {{/each}}

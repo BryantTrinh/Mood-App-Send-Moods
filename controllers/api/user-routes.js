@@ -33,13 +33,6 @@ router.post('/login', async (req, res) => {
 
     const validPassword = await user.checkPassword(req.body.password);
 
-    // if (!validPassword) {
-    //   res
-    //     .status(400)
-    //     .json({ message: 'Incorrect username or password, please try again' });
-    //   return;
-    // }
-
     if (!validPassword || req.body.password.length < 8) {
   res
     .status(400)
