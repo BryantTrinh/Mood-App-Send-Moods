@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="row">
   <div class="">
-    <div class="card" style="width: 18rem;">
-      <div class="card-body saved-posts">
-        <h5 class="card-title page-title">Your Saved Posts</h5>
+    <div class="card saved-posts-card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Your Saved Posts</h5>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
       {{/each}}
       <div class="edit-delete">
         <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img id="{{post.id}},{{post.user_id}}" src="assets/images/save-icon.png" class="save-icon"></button>
-        <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="sedit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button>
+        {{!-- <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="sedit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button> --}}
       </div>
     </div>
 </div>
