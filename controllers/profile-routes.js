@@ -3,8 +3,6 @@ const { Post, User, Emoji } = require('../models');
 const PostEmoji = require('../models/PostEmoji');
 const { localStorage } = require("node-localstorage");
 
-// require functions from filter.js
-
 const withAuth = require('../utils/auth');
 
 // GET all posts on profile
