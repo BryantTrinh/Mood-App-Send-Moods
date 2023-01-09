@@ -5,13 +5,13 @@
       <div alt="flex container for profile pic, username, and post title. side by side row."
         class="side-flex post-header  gap">
         <div class="pfp"><img src="/assets/images/profile-placeholder.png" alt="" width="50px"></div>
-      <div alt="username pulled from sql" class="post-user mt-0"> {{post.user.username}}</div>
-      <div class="date-created"><i><small>{{format_date post.date_created}}</small></i></div>
-      <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
+        <div alt="username pulled from sql" class="post-user mt-0"> {{post.user.username}}</div>
+        <div class="date-created"><i><small>{{format_date post.date_created}}</small></i></div>
+        <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
       </div>
       <p class="post-content">{{post.content}}</p>
-        <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
-      </div>
+      <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
+    </div>
   </div>
     <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
       {{#each post.emojis as |emoji|}}
