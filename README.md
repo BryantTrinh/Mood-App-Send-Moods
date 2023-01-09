@@ -1,32 +1,30 @@
-# Mood-App-Send-Moods
+# SAVVORY
 
-Project Requirements
-You and your group will use everything you’ve learned over the past fourteen modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+## DESCRIPTION 
 
-Use Node.js and Express.js to create a RESTful API.
+Introducing, SENDMOODS, the journaling social media app that lets you express yourself through your moods. With SENDMOODS, you can create posts and select from a range of moods that convey how you’re feeling. You can also filter posts by moods to see what others are sharing in a similar emotional state. 
+Plus, as an additional feature, you can enhance your posts by addings songs or playlists from Spotify inside your post. 
+Whether you’re feeling happy, sad, or any other emotion in between, SENDMOODS is the perfect platform for self-expression and a way to connect with other like-feeling users.
 
-Use Handlebars.js as the templating engine.
 
-Use MySQL and the Sequelize ORM for the database.
+## USAGE
 
-Have both GET and POST routes for retrieving and adding new data.
+To use the application simply navigate to it’s live link at: <<<>>>
 
-Be deployed using Heroku (with data).
+Once on landing page, press get started to login/register.
 
-Use at least one new library, package, or technology that we haven’t discussed.
+Once logged in, you can view your feed, your profile, and saved posts.
 
-Have a polished UI.
+On the profile page, you are able to edit your posts & save them.
 
-Be responsive.
+On the profile, feed, and saved pages, you are able to filter the posts by emoji moods.
 
-Be interactive (i.e., accept and respond to user input).
+## COLLABORATORS 
 
-Have a folder structure that meets the MVC paradigm.
+Nicole - https://github.com/nbtrieu
 
-Include authentication (express-session and cookies).
+Bryant - https://github.com/BryantTrinh
 
-Protect API keys and sensitive information with environment variables.
+Armond -  https://github.com/vicearus
 
-Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-
-Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+Jeremiah - https://github.com/cytoplasma
