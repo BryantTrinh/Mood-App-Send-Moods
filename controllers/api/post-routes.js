@@ -30,8 +30,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET route for posts with the same emoji_id (for search functionality)
-router.get('/filter/:id', async (req, res) => {
+// GET route for posts with the same emoji_id (for testing in Insomnia only)
+router.get('/search/:id', async (req, res) => {
   try {
     const dbPostEmojiData = await PostEmoji.findAll({
       where: { emoji_id: req.params.id }, 
@@ -39,6 +39,10 @@ router.get('/filter/:id', async (req, res) => {
         {
           model: Post,
           include: [ User ]
+        },
+        {
+          model: Emoji,
+          through: PostEmoji,
         }
       ]
     });

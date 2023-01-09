@@ -5,7 +5,8 @@ router.post('/', async (req, res) => {
     try {
         const newSave = await SavedPost.create({
             post_id: req.body.post_id,
-            user_id: req.body.user_id
+            user_id: req.body.user_id,
+            saved_by: req.session.user_id
         });
         res.status(200).json(newSave);
     } catch (error) {
@@ -18,7 +19,8 @@ router.post('/delete', async (req, res) => {
         const deleteSave = await SavedPost.destroy({
             where:{
             post_id: req.body.post_id,
-            user_id: req.body.user_id
+            user_id: req.body.user_id,
+            saved_by: req.session.user_id
             }
         });
         res.status(200).json(deleteSave);

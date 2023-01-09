@@ -273,7 +273,7 @@ p {
 /* post container properties */
 .post-polaroid {
   border: 25px solid whitesmoke;
-  background-image: url("/public/assets/images/woodtable.jpeg");
+  /* background-image: url("/public/assets/images/woodtable.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: white; */
