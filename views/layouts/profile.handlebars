@@ -16,41 +16,56 @@
 </head>
 
 <body>
-  <div class="d-flex flex-column full-screen">
-    <nav class="row navbar full-screen sticky">
-      <h1 class="text-center navtitle"><a href="/">SENDMOODS</a></h1>
-      {{!-- <div>
-        <button class="btn btn-primary" type="submit" id="logout-btn" onclick="logoutFormHandler(event)">Log
-          Out</button>
-      </div> --}}
-    </nav>
-    <div class="">
-      <main class="container container-fluid mt-2">
-        <div class="col-auto">
-          {{{body}}}
-        </div>
-      </main>
-      <footer class="footer d-flex flex-row justify-content-center">
-        <div class="right-corner-container">
-          <button class="right-corner-container-button" onclick="location.href='/profile/new'">
-            <span class="short-text">+</span>
-            <span class="long-text">New Post</span>
-          </button>
-        </div>
-      </footer>
+  <div class="nav sticky">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <a href="/" class="nav-title">
+        SENDMOODS
+      </a>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links" id="topnav">
+      <a href="/feed">Feed</a>
+      <a href="/saved-posts">Saved</a>
+      <a href="/profile">Profile</a>
+      <button class="logout-button btn btn-dark" type="submit" id="logout-btn" onclick="logoutFormHandler(event)">Log
+        Out</button>
     </div>
   </div>
+  <div class="">
+    <main class="container container-fluid mt-2">
+      <div class="col-auto">
+        {{{body}}}
+      </div>
+    </main>
+    <footer class="footer d-flex flex-row justify-content-center">
+      <div class="right-corner-container">
+        <button class="right-corner-container-button" onclick="location.href='/profile/new'">
+          <span class="short-text">+</span>
+          <span class="long-text">New Post</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+  </div>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="/js/logout.js"></script>
-<script>
-  $(".right-corner-container-button").hover(function() {
-    $(".long-text").addClass("show-long-text");   
-}, function () {
-    $(".long-text").removeClass("show-long-text");
-});
-</script>
-  {{!-- <script src="/js/savePost.js"></script> --}}
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/js/logout.js"></script>
+  <script>
+    $(".right-corner-container-button").hover(function () {
+      $(".long-text").addClass("show-long-text");
+    }, function () {
+      $(".long-text").removeClass("show-long-text");
+    });
+  </script>
+  <script src="/js/savePost.js"></script>
 
 </body>
 

@@ -1,63 +1,67 @@
 <div class="container-fluid">
   <div class="row">
-  <div class="">
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Your Saved Posts</h5>
+    <div class="">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Your Saved Posts</h5>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="search-box">
-  <h4>Search posts by emotion</h4>
-  <form id="emoji-search-form">
-    <label for="emoji-dropdown">Choose an emoji:</label>
-    <select id="emoji-dropdown">
-      <option value="1">Happy 😁</option>
-      <option value="2">Neutral 😐</option>
-      <option value="3">Anxious 😥</option>
-      <option value="4">Angry 😠</option>
-      <option value="5">Sad 😢</option>
-    </select>
-    <input type="button" name="search" value="Search" class="btn btn-dark" onclick="searchFormHandler(event)">
-  </form>
-</div>
-<div class="container posts-container">
+  <div class="search-box">
+    <h4>Search posts by emotion</h4>
+    <form id="emoji-search-form">
+      <label for="emoji-dropdown">Choose an emoji:</label>
+      <select id="emoji-dropdown">
+        <option value="1">Happy 😁</option>
+        <option value="2">Neutral 😐</option>
+        <option value="3">Anxious 😥</option>
+        <option value="4">Angry 😠</option>
+        <option value="5">Sad 😢</option>
+      </select>
+      <input type="button" name="search" value="Search" class="btn btn-dark" onclick="searchFormHandler(event)">
+    </form>
+  </div>
+  <div class="container posts-container">
     <div class="posts-items">
-    {{#each savedPosts as |savedPost|}}
-<div alt="flex container for post elements. column stack" class="stack-flex post-polaroid">
-  <div alt="trial" class="trial">
-    <div alt="flex container for post with lined background. column stack" class="stack-flex post-content spaced">
-      <div alt="flex container for profile pic, username, and post title. side by side row."
-        class="side-flex post-header  gap">
-        <div class="pfp"><img src="/assets/images/profile-placeholder.png" alt="" width="50px"></div>
-      <div alt="username pulled from sql" class="post-user mt-0"> {{savedPost.user.username}} </div>
-    <div class="date-created"><i><small>{{format_date post.date_created}}</small></i></div>
-      <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
+      {{#each savedPosts as |savedPost|}}
+      <div alt="flex container for post elements. column stack" class="stack-flex post-polaroid">
+        <div alt="trial" class="trial">
+          <div alt="flex container for post with lined background. column stack" class="stack-flex post-content spaced">
+            <div alt="flex container for profile pic, username, and post title. side by side row."
+              class="side-flex post-header  gap">
+              <div class="pfp"><img src="/assets/images/profile-placeholder.png" alt="" width="50px"></div>
+              <div alt="username pulled from sql" class="post-user mt-0"> {{savedPost.user.username}} </div>
+              <div class="date-created"><i><small>{{format_date post.date_created}}</small></i></div>
+              <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
+            </div>
+            <p class="post-content">{{post.content}}</p>
+            <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
+          </div>
+        </div>
+        <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
+          {{!-- the save icon needs to be at the end of this flex box.. --}}
+          {{#each post.emojis as |emoji|}}
+          <img src="{{emoji.url}}" width="70px">
+          {{/each}}
+          <div class="edit-delete">
+            <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img
+                id="{{post.id}},{{post.user_id}}" src="assets/images/save-icon.png" class="save-icon"></button>
+            <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="sedit-post-btn"
+              onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png"
+                class="edit-icon"></button>
+          </div>
+        </div>
       </div>
-      <p class="post-content">{{post.content}}</p>
-        <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
-      </div>
-  </div>
-    <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
-      {{!-- the save icon needs to be at the end of this flex box.. --}}
-      {{#each post.emojis as |emoji|}}
-      <img src="{{emoji.url}}" width="70px">
+      <hr>
+      {{else}}
+      <p>No posts found... yet</p>
       {{/each}}
-      <div class="edit-delete">
-        <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img id="{{post.id}},{{post.user_id}}" src="assets/images/save-icon.png" class="save-icon"></button>
-        <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="sedit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button>
-      </div>
     </div>
   </div>
-  <hr>
-  {{else}}
-  <p>No posts found... yet</p>
-{{/each}}
-</div>
-</div>
 
-{{!-- <script src="/js/savePost.js"></script> --}}
-<script src="/js/search.js"></script>
-    </div>
+  {{!--
+  <script src="/js/savePost.js"></script> --}}
+  <script src="/js/search.js"></script>
+</div>
 </div>

@@ -40,4 +40,3 @@ Post.findbyPk(postId).then(post => {
 
   document.body.appendChild(card);
 });
-
