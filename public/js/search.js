@@ -1,7 +1,7 @@
 let emojiId;
 
-const filterFormHandler = async (event) => {
-  console.log('STARTING filter.js for filtering by emoji');
+const searchFormHandler = async (event) => {
+  console.log('STARTING search.js for searching by emoji');
   event.preventDefault();
 
   const emojiOptionsArray = document.querySelector('#emoji-dropdown').options;
@@ -13,10 +13,12 @@ const filterFormHandler = async (event) => {
   };
   console.log('>>> emojiId: ', emojiId);
 
-  const result = await fetch(`api/post/filter/${emojiId}`, {
-    method: 'GET',
-  });
-  console.log(result); // the GET request to the API endpoint works! but not rendering
+  // const result = await fetch(`api/post/search/${emojiId}`, {
+  //   method: 'GET',
+  // });
+  // console.log(result); // the GET request to the API endpoint works! but not rendering
+
+  document.location.replace(`/search/${emojiId}`);
 }
 
 // TO BE DISCUSSED WITH TEAM:

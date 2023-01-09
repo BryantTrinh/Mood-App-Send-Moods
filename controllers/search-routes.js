@@ -1,35 +1,39 @@
-// const router = require('express').Router();
-// const { Post, User, Emoji } = require('../models');
-// const withAuth = require('../utils/auth');
+const router = require('express').Router();
+const { Post, User, Emoji, PostEmoji } = require('../models');
+const withAuth = require('../utils/auth');
 
+// GET posts with the same emojiId to render on search results page
+// when we route to localhost:3002/search/:id
+router.get('/:id', withAuth, async (req, res) => {
+    try {
+      const dbPostEmojiData = await PostEmoji.findAll({
+        where: { emoji_id: req.params.id }, 
+        include: [ 
+          {
+            model: Post,
+            include: [ 
+              User,
+              {
+                model: Emoji,
+                through: PostEmoji,
+              }
+            ]
+          },
+        ]
+      });
+      
+      const postEmojis = dbPostEmojiData.map((postEmoji) => postEmoji.get({ plain: true }));
+      
+      res.render('search-results', {
+        layout: 'profile',
+        postEmojis,
+      });
+      console.log('>>> postEmojis: ', postEmojis);
+      
+    } catch (error) {
+      console.log(error);
+      res.redirect('login');
+    }
+  });
 
-// router.get('/:emojiId', withAuth, (req, res) => {
-
-//   try {
-
-//   const emojiId = req.params.emojiId;
-
-//     Post.findAll({
-//       where: {
-//         emoji_id: emojiId,
-//       },
-//       include: [
-//         User,
-//         {
-//         model: Emoji,
-//         through: PostEmoji,
-//         },
-//     ],
-//   }).then(posts => {
-//     // post.toJSON create new array that will contain plain javascript object that represents each element in the posts array.
-//     res.send(posts.map(post => post.toJSON()));
-//   }).catch(err => {
-//     res.status(500).send('Error searching for posts containing those emojis');
-//   });
-// } catch (error) {
-//   console.error(error);
-//   res.status(500).send('Error searching for posts containing those emojis')
-// }
-// });
-
-// module.exports = router;
+module.exports = router;
