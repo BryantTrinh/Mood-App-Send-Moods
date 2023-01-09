@@ -2,25 +2,11 @@
   <div class="row">
   <div class="">
     <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Your Saved Posts</h5>
+      <div class="card-body saved-posts">
+        <h5 class="card-title page-title">Your Saved Posts</h5>
       </div>
     </div>
   </div>
-</div>
-<div class="search-box">
-  <h4>Search posts by emotion</h4>
-  <form id="emoji-search-form">
-    <label for="emoji-dropdown">Choose an emoji:</label>
-    <select id="emoji-dropdown">
-      <option value="1">Happy 😁</option>
-      <option value="2">Neutral 😐</option>
-      <option value="3">Anxious 😥</option>
-      <option value="4">Angry 😠</option>
-      <option value="5">Sad 😢</option>
-    </select>
-    <input type="button" name="search" value="Search" class="btn btn-dark" onclick="searchFormHandler(event)">
-  </form>
 </div>
 <div class="container posts-container">
     <div class="posts-items">
@@ -49,15 +35,17 @@
         <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="sedit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button>
       </div>
     </div>
-  </div>
-  <hr>
-  {{else}}
+</div>
+<hr>
+{{else}}
+<div class="no-posts-msg">
   <p>No posts found... yet</p>
+</div>
+
 {{/each}}
 </div>
 </div>
 
-{{!-- <script src="/js/savePost.js"></script> --}}
 <script src="/js/search.js"></script>
     </div>
 </div>
