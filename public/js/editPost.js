@@ -22,7 +22,7 @@ const editPostFormHandler = async (event) => {
 
   await fetch(`/api/post/${postId}`, {
     method: 'PUT',
-    body: JSON.stringify({ title, content, selected_moods, spotify_embed_code}),
+    body: JSON.stringify({ title, content, selected_moods, spotify_embed_code }),
     headers: { 'Content-Type': 'application/json' },
   });
 
