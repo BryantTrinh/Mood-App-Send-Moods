@@ -9,7 +9,7 @@ Whether you’re feeling happy, sad, or any other emotion in between, SENDMOODS 
 
 ## USAGE
 
-To use the application simply navigate to it’s live link at: <<<>>>
+To use the application simply navigate to it’s live link at: https://shrouded-eyrie-81227.herokuapp.com/
 
 Once on landing page, press get started to login/register.
 
