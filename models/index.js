@@ -40,6 +40,10 @@ PostEmoji.belongsTo(Post, {
 
 PostEmoji.belongsTo(Emoji, {
   foreignKey: 'emoji_id',
+});
+
+PostEmoji.belongsTo(User, {
+  foreignKey: 'user_id',
 })
 
 SavedPost.belongsTo(User, {

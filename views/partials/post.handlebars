@@ -1,34 +1,3 @@
-{{!-- {{#each posts as |post|}}
-<div class="stack-flex post-polaroid">
-        <div class="trial">
-            <div class="stack-flex post-content spaced">
-                <div
-                    class="side-flex post-header gap">
-
-                    <div alt="username pulled from sql"><h3 class="mt-0 post-user">{{post.user.username}}</h3> </div>
-                    <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
-                </div>
-                <p class="post-content">{{post.content}}</p>
-                    <div alt="music embed"><small>spotify here</small></div>
-            </div>
-        </div>
-        <div class="emojimark">
-        <div class="post-footer side-flex spaced gap ">
-            <img src="https://res.cloudinary.com/dnwrm14k9/image/upload/v1672862460/happy_yjgksa.svg" width="50" id="emoji5"/>
-            <img src="/assets/emojis/neutral.svg" width="50px" id="emoji5"/>
-            <img src="/assets/emojis/anxious.svg" width="50px" id="emoji5"/>
-            <img src="/assets/emojis/angry.svg" width="50px" id="emoji5"/>
-            <img src="/assets/emojis/sad.svg" width="50px" id="emoji5"/>
-        </div>
-        <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img src="assets/images/save-icon.png" width="30px" class="save-icon"></button>
-        </div>
-  </div>
-  <hr>
-{{/each}}
-
-<script src="/js/savePost.js"></script>  --}}
-
-
 {{#each posts as |post|}}
 <div alt="flex container for post elements. column stack" class="stack-flex post-polaroid">
   <div alt="trial" class="trial">
@@ -45,7 +14,6 @@
       </div>
   </div>
     <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
-      {{!-- the save icon needs to be at the end of this flex box.. --}}
       {{#each post.emojis as |emoji|}}
       <img src="{{emoji.url}}" width="70px">
       {{/each}}

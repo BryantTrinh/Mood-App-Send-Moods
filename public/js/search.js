@@ -1,6 +1,6 @@
 let emojiId;
 
-const searchFormHandler = async (event) => {
+const feedSearchFormHandler = async (event) => {
   console.log('STARTING search.js for searching by emoji');
   event.preventDefault();
 
@@ -18,7 +18,28 @@ const searchFormHandler = async (event) => {
   // });
   // console.log(result); // the GET request to the API endpoint works! but not rendering
 
-  document.location.replace(`/search/${emojiId}`);
+  document.location.replace(`/search/feed/${emojiId}`);
+};
+
+const profileSearchFormHandler = async (event) => {
+  console.log('STARTING search.js for searching by emoji');
+  event.preventDefault();
+
+  const emojiOptionsArray = document.querySelector('#emoji-dropdown').options;
+
+  for (i = 0; i < emojiOptionsArray.length; i++) {
+    if (emojiOptionsArray[i].selected) {
+      emojiId = parseInt(emojiOptionsArray[i].value);
+    }
+  };
+  console.log('>>> emojiId: ', emojiId);
+
+  // const result = await fetch(`api/post/search/${emojiId}`, {
+  //   method: 'GET',
+  // });
+  // console.log(result); // the GET request to the API endpoint works! but not rendering
+
+  document.location.replace(`/search/profile/${emojiId}`);
 }
 
 // TO BE DISCUSSED WITH TEAM:

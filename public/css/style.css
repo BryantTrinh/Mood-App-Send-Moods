@@ -5,11 +5,11 @@
 :root {
   --primary: #FFFFFF;
   --secondary: #F4E2F8;
-  --tertiary: #87798A;
+  --tertiary: #E8EDFE;
   /* --dark-primary: #55bcc9; */
-  --light-dark: #404040;
+  --light-dark: #D8D8D8;
   --dark: #000000;
-  --accent: #D060E4;
+  --light-blue: #DFF8FC;
   --border-radius: 0.3rem;
 }
 
@@ -230,11 +230,12 @@ p {
 }
 
 .logout-button {
-  background-color: black;
+  background-color: var(--light-dark);
   transition: ease-in-out;
   color: white;
   padding: 13px 10px 13px 10px;
   text-transform: uppercase;
+  border-radius: var(--border-radius);
 }
 
 .logout-button:hover {
@@ -418,10 +419,10 @@ p {
 
 .nav > .nav-header > .nav-title {
   display: inline-block;
-  font-size: 22px;
+  font-size: 40px;
   font-weight: 700;
   color: black;;
-  padding: 10px 10px 10px 10px;
+  padding: 0px 30px 0px 10px;
 }
 
 .nav > .nav-btn {
@@ -439,6 +440,7 @@ p {
 .nav > .nav-links > a {
   display: inline-block;
   padding: 13px 10px 13px 10px;
+  margin-right: 10px;
   text-decoration: none;
   color: black;
 }
@@ -700,3 +702,26 @@ p {
   top: 0;
   background-color: white;
 }
+
+.feed {
+  background-color: var(--secondary);
+  border-radius: var(--border-radius);
+}
+
+.profile {
+  background-color: var(--tertiary);
+  border-radius: var(--border-radius);
+}
+
+.saved-posts {
+  background-color: var(--light-blue);
+  border-radius: var(--border-radius);
+}
+
+.page-title {
+  font-size: 2rem;
+}
+
+/* .no-posts-msg {
+  bottom: 100px;
+} */
