@@ -5,13 +5,14 @@
 :root {
   --primary: #FFFFFF;
   --secondary: #F4E2F8;
-  --tertiary: #E8EDFE;
+  --tertiary: #e8edfe;
   /* --dark-primary: #55bcc9; */
-  --light-dark: #D8D8D8;
+  --light-dark: #d8d8d8;
   --dark: #000000;
-  --light-blue: #DFF8FC;
-  --light-green: #EAF8D5;
+  --light-blue: #dff8fc;
+  --accent: #D060E4;
   --border-radius: 0.3rem;
+  scroll-behavior: smooth;;
 }
 
 * {
@@ -397,6 +398,7 @@ p {
 
 .card {
   margin: 0 auto;
+  background-color: whitesmoke;
 }
 
 .nav {
@@ -466,11 +468,12 @@ p {
   margin-right: 10px;
   text-decoration: none;
   color: black;
+  transition: all .3s ease-in-out;
 }
 
 .nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+
 }
 
 .nav > #nav-check {
@@ -549,6 +552,16 @@ p {
   margin: auto;
   margin: 10px;
   border: 1px solid gray;
+}
+
+.features-card-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-card-container p {
+  width: 95%;
+  text-align: center;
 }
 
 
@@ -737,6 +750,20 @@ p {
 }
 
 
+
+.nav-links .feed:hover {
+  background-color: var(--secondary);
+}
+
+.nav-links .saved-posts:hover {
+  background-color: var(--tertiary);
+}
+
+.nav-links .profile:hover {
+  background-color: var(--light-blue);
+}
+
+
 @media screen and (max-width: 600px) {
   .login-background {
     background-position: right;
@@ -772,3 +799,4 @@ p {
     align-items: center;
   }
 }
+
