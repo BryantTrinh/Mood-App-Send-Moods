@@ -16,14 +16,29 @@
 </head>
 
 <body>
-  <div class="d-flex flex-column full-screen">
-    <nav class="row navbar full-screen sticky">
-      <h1 class="text-center navtitle"><a href="/">SENDMOODS</a></h1>
-      {{!-- <div>
-        <button class="btn btn-primary" type="submit" id="logout-btn" onclick="logoutFormHandler(event)">Log
-          Out</button>
-      </div> --}}
-    </nav>
+  <div class="nav sticky">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <a href="/" class="nav-title">
+        SENDMOODS
+      </a>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links" id="topnav">
+      <a href="/feed">Feed</a>
+      <a href="/saved-posts">Saved</a>
+      <a href="/profile">Profile</a>
+      <button class="logout-button btn btn-dark" type="submit" id="logout-btn" onclick="logoutFormHandler(event)">Log
+        Out</button>
+    </div>
+  </div>
     <div class="">
       <main class="container container-fluid mt-2">
         <div class="col-auto">
