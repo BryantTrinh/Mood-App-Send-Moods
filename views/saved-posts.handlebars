@@ -8,7 +8,8 @@
       </div>
     </div>
   </div>
-  <div class="search-box">
+</div>
+  <div class="filter-box">
     <h4>Search posts by emotion</h4>
     <form id="emoji-search-form">
       <label for="emoji-dropdown">Choose an emoji:</label>
@@ -57,6 +58,10 @@
       {{else}}
       <p>No posts found... yet</p>
       {{/each}}
+      <div class="edit-delete">
+        <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img id="{{post.id}},{{post.user_id}}" src="assets/images/save-icon.png" class="save-icon"></button>
+        <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="sedit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button>
+      </div>
     </div>
   </div>
 
