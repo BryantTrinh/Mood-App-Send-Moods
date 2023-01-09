@@ -782,6 +782,10 @@ p {
   background-color: var(--light-blue);
 }
 
+.hero-items h1 {
+  margin-bottom: .5em;
+}
+
 
 
 @media screen and (max-width: 600px) {
