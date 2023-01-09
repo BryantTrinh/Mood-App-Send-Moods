@@ -1,9 +1,10 @@
 <div class="container-fluid">
   <div class="row">
     <div class="">
-        <button class="btn">
+        {{!-- <button class="btn">
             <a href="/profile">🔙 Back to Profile</a>
-          </button>
+            <a href="/feed">🔙 Back to Feed</a>
+          </button> --}}
         <div class="card" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">SEARCH RESULTS</h5>
@@ -16,17 +17,19 @@
       {{#each postEmojis as |postEmoji|}}
         <div alt="flex container for post elements. column stack" class="stack-flex post-polaroid">
           <div alt="trial" class="trial">
-            <div alt="flex container for post with lined background. column stack" class="stack-flex post-content spaced">
+            <div class="stack-flex post-content spaced">
               <div alt="flex container for profile pic, username, and post title. side by side row."
                 class="side-flex post-header  gap">
                 <div class="pfp"><img src="/assets/images/profile-placeholder.png" alt="" width="50px"></div>
-              <div alt="username pulled from sql" class="post-user mt-0"> {{post.user.username}}</div>
-              <div class="date-created"><i><small>{{format_date post.date_created}}</small></i></div>
-              <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
+                <div alt="username pulled from sql" class="post-user mt-0"> {{post.user.username}}</div>
+                <div class="date-created"><i><small>{{format_date post.date_created}}</small></i></div>
+                <div alt="post title pulled from sql. display on own line" class="post-title">
+                  <i>{{post.title}}</i>
+                </div>
               </div>
               <p class="post-content">{{post.content}}</p>
-                <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
-              </div>
+              <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
+            </div>
           </div>
           <div alt="flex container for emojis associated with this post" class="post-footer spaced gap ">
             {{#each postEmoji.post.emojis as |emoji|}}
