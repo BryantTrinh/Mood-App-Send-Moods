@@ -210,7 +210,6 @@ p {
 
 .hero-text {
   font-size: 20px;
-  font-weight: 900;
   color: white;
   text-transform: lowercase;
   padding-bottom: 4px;
@@ -398,7 +397,6 @@ p {
 
 .card {
   margin: 0 auto;
-  background-color: whitesmoke;
 }
 
 .nav {
@@ -562,6 +560,11 @@ p {
 .features-card-container p {
   width: 95%;
   text-align: center;
+  margin: 0 auto;
+}
+
+.features-card h3 {
+  padding-bottom: .2em;
 }
 
 
@@ -749,7 +752,17 @@ p {
   padding-right: 1em;
 }
 
+.feed-card {
+  background-color: var(--secondary);
+}
 
+.saved-posts-card {
+  background-color: var(--tertiary);
+}
+
+.profile-card {
+  background-color: var(--light-blue);
+}
 
 .nav-links .feed:hover {
   background-color: var(--secondary);
@@ -762,6 +775,7 @@ p {
 .nav-links .profile:hover {
   background-color: var(--light-blue);
 }
+
 
 
 @media screen and (max-width: 600px) {
