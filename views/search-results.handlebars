@@ -6,7 +6,7 @@
             <a href="/feed">🔙 Back to Feed</a>
           </button> --}}
         <div class="card" style="width: 18rem;">
-          <div class="card-body">
+          <div class="card-body search">
             <h5 class="card-title">SEARCH RESULTS</h5>
           </div>
         </div>
@@ -36,7 +36,7 @@
               <img src="{{emoji.url}}" width="70px">
             {{/each}}
             <div class="edit-delete">
-              <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img id="{{post.id}},{{post.user_id}}" src="../assets/images/save-icon.png" class="save-icon"></button>
+              <button alt="{{post.id}}" class="btn save-btn" id="save-post-btn" onclick="savePostHandler(event)"><img id="{{post.id}},{{post.user_id}}" src="../../assets/images/save-icon.png" class="save-icon"></button>
               <button alt="/profile/edit/{{post.id}}" class="btn edit-btn" id="edit-post-btn" onclick="location.href='/profile/edit/{{post.id}}'"><img src="/assets/images/edit-icon.png" class="edit-icon"></button>
             </div>
           </div>

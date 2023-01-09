@@ -13,11 +13,6 @@ const feedSearchFormHandler = async (event) => {
   };
   console.log('>>> emojiId: ', emojiId);
 
-  // const result = await fetch(`api/post/search/${emojiId}`, {
-  //   method: 'GET',
-  // });
-  // console.log(result); // the GET request to the API endpoint works! but not rendering
-
   document.location.replace(`/search/feed/${emojiId}`);
 };
 
@@ -34,15 +29,5 @@ const profileSearchFormHandler = async (event) => {
   };
   console.log('>>> emojiId: ', emojiId);
 
-  // const result = await fetch(`api/post/search/${emojiId}`, {
-  //   method: 'GET',
-  // });
-  // console.log(result); // the GET request to the API endpoint works! but not rendering
-
   document.location.replace(`/search/profile/${emojiId}`);
-}
-
-// TO BE DISCUSSED WITH TEAM:
-// OPTION 1: write another router.get('/filter'...) and write more code to filter.js to keep
-// the selected emoji after reloading instead of happy
-// OPTION 2: turn the filter into a search functionality and render a search result page
+};

@@ -68,6 +68,6 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     console.log(error);
     res.redirect('/login');
   }
-})
+});
 
 module.exports = router;
