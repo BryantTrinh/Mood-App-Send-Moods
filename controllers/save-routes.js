@@ -10,7 +10,7 @@ router.get('/', withAuth, async (req, res) => {
   try {
     const dbSavedPostData = await SavedPost.findAll({
       where: {
-        user_id: req.session.user_id,
+        saved_by: req.session.user_id,
       },
       include: [User,
         {model:Post,

@@ -25,6 +25,13 @@ SavedPost.init(
         key: 'id',
       },
     },
+    saved_by: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    }
   },
   {
     sequelize,
