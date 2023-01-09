@@ -8,7 +8,7 @@ const logoutFormHandler = async (event) => {
   });
 
   if (response.ok) {
-    console.log('logged out successfully');
+    alert('Logged out successfully');
     document.location.replace('/');
   } else {
     console.log('failed to log out');

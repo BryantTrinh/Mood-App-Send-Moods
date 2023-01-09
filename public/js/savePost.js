@@ -21,7 +21,7 @@ const savePostHandler = async (event) => {
         selectedElement.setAttribute("saved", "true"),
         saved = selectedElement.getAttribute("saved"),
         console.log(event.target),
-        console.log(saved),
+        alert("This has been added to your saved posts."),
         selectedElement.setAttribute("src","assets/images/filled-save.png")
         )
         return
@@ -36,7 +36,7 @@ const savePostHandler = async (event) => {
           selectedElement.setAttribute("saved", "false"),
           saved = selectedElement.getAttribute("saved"),
           console.log(event.target),
-          console.log(saved),
+          alert("This has been removed from your saved posts."),
           selectedElement.setAttribute("src","assets/images/save-icon.png")
       )
       return
