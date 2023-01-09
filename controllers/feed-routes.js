@@ -22,7 +22,7 @@ router.get('/', withAuth, async (req, res) => {
     // console.log(posts);
 
     res.render('feed', {
-      layout: 'main',
+      layout: 'profile',
       posts,
     });
 
