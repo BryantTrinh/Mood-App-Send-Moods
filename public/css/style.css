@@ -230,7 +230,7 @@ p {
 }
 
 .logout-button {
-  background-color: var(--light-dark);
+  background-color: black;
   transition: ease-in-out;
   color: white;
   padding: 13px 10px 13px 10px;
@@ -746,6 +746,12 @@ p {
 
 #emoji-search-form input {
   margin-top: -.2em;
+  background-color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+#emoji-search-form input:hover {
+  background-color: #424649;
 }
 
 #emoji-search-form label {
