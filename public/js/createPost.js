@@ -8,7 +8,8 @@ const newPostFormHandler = async (event) => {
   const unsplitContent = document.querySelector('#post-content-input').value.trim();
   const spotify_embed_code = document.querySelector('#post-embed-input').value.trim();
   const arrayContent = unsplitContent.split("\n")
-  const content = `${arrayContent}`
+  const content = arrayContent.join("<br>")
+  // const content = `${arrayContent}`.replace(",","<br>")
 
   const moodInput = document.querySelectorAll('.mood-input');
   for (let i = 0; i < moodInput.length; i++) {
@@ -27,5 +28,5 @@ const newPostFormHandler = async (event) => {
     headers: { 'Content-Type': 'application/json' },
   });
 
-  // document.location.replace('/profile');
+  document.location.replace('/profile');
   };

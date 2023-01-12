@@ -5,6 +5,6 @@ module.exports = {
     return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
   },
   format_content: content => {
-    return content.split(",").join("\n")
+    return content.split("<br>").join("\n")
   }
 };
