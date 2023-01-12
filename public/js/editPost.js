@@ -9,6 +9,7 @@ const editPostFormHandler = async (event) => {
 
   const title = document.querySelector('input[name="post-title"]').value.trim();
   const content = document.querySelector('textarea[name="post-content"]').value.trim();
+  const spotify_embed_code = document.querySelector('#post-embed-input').value.trim();
 
   const moodInput = document.querySelectorAll('.mood-input');
   for (let i = 0; i < moodInput.length; i++) {
@@ -21,7 +22,7 @@ const editPostFormHandler = async (event) => {
 
   await fetch(`/api/post/${postId}`, {
     method: 'PUT',
-    body: JSON.stringify({ title, content, selected_moods }),
+    body: JSON.stringify({ title, content, selected_moods, spotify_embed_code }),
     headers: { 'Content-Type': 'application/json' },
   });
 

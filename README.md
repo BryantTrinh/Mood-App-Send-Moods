@@ -1,32 +1,50 @@
-# Mood-App-Send-Moods
+# SENDMOODS
 
-Project Requirements
-You and your group will use everything you’ve learned over the past fourteen modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+## Description
 
-Use Node.js and Express.js to create a RESTful API.
+Introducing, SENDMOODS, the journaling social media app that lets you express yourself through your moods. With SENDMOODS, you can create posts and select from a range of moods that convey how you’re feeling. You can also filter posts by moods to see what others are sharing in a similar emotional state. 
+Plus, as an additional feature, you can enhance your posts by addings songs or playlists from Spotify inside your post. 
+Whether you’re feeling happy, sad, or any other emotion in between, SENDMOODS is the perfect platform for self-expression and a way to connect with other like-feeling users.
 
-Use Handlebars.js as the templating engine.
+## Table of Content
 
-Use MySQL and the Sequelize ORM for the database.
+* [Installation](#installation)
 
-Have both GET and POST routes for retrieving and adding new data.
+* [Usage](#usage)
 
-Be deployed using Heroku (with data).
+* [Contributing](#contributing)
 
-Use at least one new library, package, or technology that we haven’t discussed.
+* [Questions](#questions)   
 
-Have a polished UI.
 
-Be responsive.
+## Installation
 
-Be interactive (i.e., accept and respond to user input).
+To install all necessary dependencies for development purposes, please run the command below:  
 
-Have a folder structure that meets the MVC paradigm.
+``npm i express``  
 
-Include authentication (express-session and cookies).
+``npm run start``
 
-Protect API keys and sensitive information with environment variables.
 
-Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
-Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+## Usage
+
+To use the application simply navigate to it’s live link at: https://shrouded-eyrie-81227.herokuapp.com/
+
+Once on landing page, press get started to login/register.
+
+Once logged in, you can view your feed, your profile, and saved posts.
+
+On the profile page, you are able to edit your posts & save them.
+
+On the profile, feed, and saved pages, you are able to filter the posts by emoji moods.
+
+## Collaborators 
+
+Nicole - https://github.com/nbtrieu
+
+Bryant - https://github.com/BryantTrinh
+
+Armond -  https://github.com/vicearus
+
+Jeremiah - https://github.com/cytoplasma

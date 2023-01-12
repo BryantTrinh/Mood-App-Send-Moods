@@ -32,31 +32,32 @@
     </div>
 
     <div class="nav-links" id="topnav">
-      <a href="/feed">Feed</a>
-      <a href="/saved-posts">Saved</a>
-      <a href="/profile">Profile</a>
+      <a href="/feed" class="feed">Feed</a>
+      <a href="/saved-posts" class="saved-posts">Saved</a>
+      <a href="/profile" class="profile">Profile</a>
       <button class="logout-button btn btn-dark" type="submit" id="logout-btn" onclick="logoutFormHandler(event)">Log
         Out</button>
     </div>
   </div>
-    <div class="">
-      <main class="container container-fluid mt-2">
-        <div class="col-auto">
-          {{{body}}}
-        </div>
-      </main>
-      <footer class="footer d-flex flex-row justify-content-center">
-        <div class="right-corner-container">
-          <button class="right-corner-container-button" onclick="location.href='/profile/new'">
-            <span class="short-text">+</span>
-            <span class="long-text">New Post</span>
-          </button>
-        </div>
-      </footer>
-    </div>
+  <div class="">
+    <main class="container container-fluid mt-2">
+      <div class="col-auto">
+        {{{body}}}
+      </div>
+    </main>
+    <footer class="footer d-flex flex-row justify-content-center">
+      <div class="right-corner-container">
+        <button class="right-corner-container-button" onclick="location.href='/profile/new'">
+          <span class="short-text">+</span>
+          <span class="long-text">New Post</span>
+        </button>
+      </div>
+    </footer>
+  </div>
   </div>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<<<<<<< HEAD
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/js/logout.js"></script>
 <script>
   $(".right-corner-container-button").hover(function() {
@@ -65,6 +66,17 @@
     $(".long-text").removeClass("show-long-text");
 });
 </script>
+=======
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/js/logout.js"></script>
+  <script>
+    $(".right-corner-container-button").hover(function () {
+      $(".long-text").addClass("show-long-text");
+    }, function () {
+      $(".long-text").removeClass("show-long-text");
+    });
+  </script>
+>>>>>>> 04af603dc2ab512b12fc4889578cda0715ff80f3
   <script src="/js/savePost.js"></script>
 
 </body>

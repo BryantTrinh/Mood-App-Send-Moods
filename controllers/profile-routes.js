@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Post, User, Emoji } = require('../models');
 const PostEmoji = require('../models/PostEmoji');
-const { localStorage } = require("node-localstorage");
 
 const withAuth = require('../utils/auth');
 
@@ -11,7 +10,6 @@ router.get('/', withAuth, async (req, res) => {
     const dbPostData = await Post.findAll({
       where: {
         user_id: req.session.user_id,
-        // emoji_id: emojiId, // *optional query parameter
       },
       include: [
         {
@@ -73,8 +71,6 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     console.log(error);
     res.redirect('/login');
   }
-})
-
-// router.get('/saved-post', withAuth, async ())
+});
 
 module.exports = router;
