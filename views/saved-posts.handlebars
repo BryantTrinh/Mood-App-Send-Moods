@@ -21,7 +21,7 @@
               <div class="date-created"><i><small>{{format_date post.date_created}}</small></i></div>
               <div alt="post title pulled from sql. display on own line" class="post-title"><i>{{post.title}}</i></div>
             </div>
-            <p class="post-content">{{post.content}}</p>
+            <p class="post-content"id="line-break">{{format_content post.content}}</p>
             <div id="spotifyContainer" class="spotify-container">{{{post.spotify_embed_code}}}</div>
           </div>
         </div>
